@@ -1,14 +1,17 @@
-<body>
-    <form action="form.php" method="GET">
+<!DOCTYPE html>
+<html>
+  <body>
+   <form action="form.php" method="POST">
         <h4 class=a>Application Form:</h4>
-        Username:            <input type="text" name="Username" placeholder="Username" required><br>
-        Email:       <input type="email" name="email" placeholder="name@xyz.com" required><br>    
-        Contact:        <input type="number" maxlength="10" name="pno" placeholder="Contact" required><br>
+        Username:            <input type="text" name="username" placeholder="john" required><br>
+        Email:       <input type="email" name="email" placeholder="john@xyz.com" required><br>    
+        Contact:        <input type="number" maxlength="10" name="contact" placeholder="0123456789" minlength="10" required><br>
         Gender: <input type="radio" name="gender" value="Male" required>Male
                 <input type="radio" name="gender" value="Female" required>Female
               <input type="radio" name="gender" value="Other" required>Other <br>
         City:                <select id="city" name="city">
-                                <option selected>Mumbai</option>
+                                <option  selected disabled>None</option>
+                                <option >Mumbai</option>
                                 <option>Delhi</option>
                                 <option>Jaipur</option>
                                 <option>Mussoorie</option>
@@ -21,5 +24,19 @@
                             </select><br>
         <input type="submit" value="Submit">
     </form>
-</body>
+
+    ?php
+    if(isset($_POST["submit"])){
+      $username=$_POST["username"];
+      $email=$_POST["email"];
+      $contact=$_POST["contact"];
+      $gender=$_POST["gender"];
+      $city=$_POST["city"];
+    }
+    else
+      echo <br>"No Input";
+    ?>
+
+
+  </body>
 </html>
