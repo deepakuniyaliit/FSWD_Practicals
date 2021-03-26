@@ -1,0 +1,183 @@
+<html> 
+<head> 
+
+  
+<style> 
+validation{                                         
+    margin-left: 70px; 
+    font-weight: bold ; 
+    float: left; 
+    clear: left; 
+    width: 100px; 
+    text-align: left; 
+    margin-right: 10px; 
+    font-family:sans-serif,bold, Arial, Helvetica; 
+    font-size:14px; 
+    color:red;
+} 
+   
+div {  
+    box-sizing: border-box; 
+    width: 100%; 
+    border: 100px solid black; 
+    float: left; 
+    align-content: center; 
+    align-items: center; 
+} 
+   
+form {                                         
+    margin: 0 auto; 
+    width: 600px;
+ color:red;
+ bgcolor=cyan; 
+}
+</style>
+</head> 
+   
+<body> 
+<h1 style="text-align: center"> FORM </h1> 
+
+<div>   
+      
+ <form name="RegForm" action="/configuration.php" onsubmit="return validation()" method="post">>  
+    
+    <p>Name: <input type="text"  name="Username" autocomplete ="off"> </ps><br> 
+    <span id="username"></span><br>       
+    <p>E-mail Address: <input type="text" name="EMail" autocomplete ="off">  </p><br> 
+    <p>Contact: <input type="text" name="Telephone" autocomplete ="off"> </p><br> 
+    <p><input type="radio" id="male" name="Gender" value="male">
+    <label for="male">Male</label><br>
+    <input type="radio" id="female" name="Gender" value="female">
+    <label for="female">Female</label><br>
+    <input type="radio" id="other" name="Gender" value="other">
+    <label for="other">Other</label></p> 
+           
+    <p>SELECT YOUR CITY    
+        <select type="text" value="" name="City"> 
+            <option>Mumbai</option> 
+            <option>Delhi</option> 
+            <option>Jaipur</option> 
+            <option>Mussoorie</option>
+            <option>Nainital</option>
+            <option>Chennai</option>
+            <option>Pune</option>
+            <option>Banglore</option>
+            <option>Hyderabad</option>
+            <option>Lucknow</option> 
+            
+        </select></p><br><br> 
+    <p><input type="submit" value="Submit" name="Submit">      
+        <input type="reset" value="Reset" name="Reset">   
+    </p>          
+</form>
+</div> 
+<script> 
+function validation()                                    
+{              
+    var name = document.forms["RegForm"]["Username"];               
+    var email = document.forms["RegForm"]["EMail"];    
+    var phone = document.forms["RegForm"]["Telephone"];  
+    var what =  document.forms["RegForm"]["City"];  
+    if (name.value == "")                                  
+    { 
+         window.alert("Please enter your name."); 
+         name.focus(); 
+         return false; 
+    } 
+     
+    if ((name.value.length<=2)||(name.value.length>20))                                  
+    { 
+         window.alert("user length must be between 2 and 20"); 
+         name.focus(); 
+         return false; 
+    } 
+    if (!isNaN(name.value))                                  
+    { 
+         window.alert("only characters are allowed"); 
+         name.focus(); 
+         return false; 
+    } 
+       
+    if (email.value == "")                                   
+    { 
+        window.alert("Please enter a valid e-mail address."); 
+        email.focus(); 
+        return false; 
+    } 
+   
+    if (email.value.indexOf("@")<=0)                
+    { 
+        window.alert("@ invalid position"); 
+        email.focus(); 
+        return false; 
+    } 
+   
+    if ((email.value.charAt(email.value.length-4) !='.')&&(email.value.charAt(email.value.length-3)!='.'))                 
+    { 
+        window.alert(". invalid position"); 
+        email.focus(); 
+        return false; 
+    } 
+    
+
+   
+    if (phone.value == "")                           
+    { 
+        window.alert("user must write his phone_number"); 
+        phone.focus(); 
+        return false; 
+    } 
+    if (isNaN(phone.value))                         
+    { 
+        window.alert("Please enter your telephone number in digit ."); 
+        phone.focus(); 
+        return false; 
+    }  
+ if (phone.value.length!=10)                           
+    { 
+        window.alert("mobile number must be of 10 digit"); 
+        phone.focus(); 
+        return false; 
+    } 
+     
+ if (what.selectedIndex < 1)                  
+    { 
+        alert("Please enter your city."); 
+        what.focus(); 
+        return false; 
+    } 
+   
+    return true; 
+}</script> 
+</body> 
+</html> 
+<?php
+if (isset($_POST['submit'])) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $contact = $_POST['contact'];
+    $city = $_POST['City'];
+   
+    //echo "Name : $name <br/>";
+       // echo "Email : $email <br/>";
+        //echo "Contact : $contact <br/>";
+        //echo "City : $city <br/>";
+    }
+    echo "
+    <table>
+    <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Contact</th>
+    <th>City</th>
+    </tr>
+    <tr>
+    <td>$name</td>
+    <td>$email</td>
+    <td>$contact</td>
+    <td>$city</td>
+     </tr>
+     </table>
+        ";}
+
+ ?>
