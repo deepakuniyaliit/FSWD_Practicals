@@ -6,7 +6,7 @@ $databasename = "WebPractical";
 $conn = mysqli_connect($hostname,$username,$password,$databasename);
 if($conn)
 {
-    echo "Connection Successfull";
+    //echo "Connection Successfull";
 
 }
 else
