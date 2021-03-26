@@ -1,0 +1,72 @@
+[
+    {
+      "albumId": 1,
+      "id": 1,
+      "title": "one",
+      "url": "https://via.placeholder.com/600/92c952",
+      "thumbnailUrl": "https://via.placeholder.com/150/92c952"
+    },
+    {
+      "albumId": 1,
+      "id": 2,
+      "title": "two",
+      "url": "https://via.placeholder.com/600/771796",
+      "thumbnailUrl": "https://via.placeholder.com/150/771796"
+    },
+    {
+      "albumId": 2,
+      "id": 2,
+      "title": "three",
+      "url": "https://via.placeholder.com/600/000000",
+      "thumbnailUrl": "https://via.placeholder.com/150/000000"
+    },
+    {
+      "albumId": 1,
+      "id": 3,
+      "title": "four",
+      "url": "https://via.placeholder.com/600/ffffff",
+      "thumbnailUrl": "https://via.placeholder.com/150/ffffff"
+    },
+    {
+      "albumId": 1,
+      "id": 4,
+      "title": "five",
+      "url": "https://via.placeholder.com/600/999999",
+      "thumbnailUrl": "https://via.placeholder.com/150/999999"
+    },
+    {
+      "albumId": 1,
+      "id": 5,
+      "title": "six",
+      "url": "https://via.placeholder.com/600/777777",
+      "thumbnailUrl": "https://via.placeholder.com/150/777777"
+    },
+    {
+      "albumId": 2,
+      "id": 5,
+      "title": "seven",
+      "url": "https://via.placeholder.com/600/555555",
+      "thumbnailUrl": "https://via.placeholder.com/150/555555"
+    },
+    {
+      "albumId": 3,
+      "id": 5,
+      "title": "eight",
+      "url": "https://via.placeholder.com/600/759683",
+      "thumbnailUrl": "https://via.placeholder.com/150/759683"
+    },
+    {
+      "albumId": 4,
+      "id": 5,
+      "title": "nine",
+      "url": "https://via.placeholder.com/600/aaaaaa",
+      "thumbnailUrl": "https://via.placeholder.com/150/aaaaaa"
+    },
+    {
+      "albumId": 5,
+      "id": 5,
+      "title": "ten",
+      "url": "https://via.placeholder.com/600/dddddd",
+      "thumbnailUrl": "https://via.placeholder.com/150/dddddd"
+    }
+  ]
