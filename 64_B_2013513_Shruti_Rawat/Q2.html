@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title> Q2</title>
+<style>
+table,th,td{
+border: 1px solid black;
+border-collapse: collapse;
+}
+
+</style>
+<script>
+function validateForm() {
+  var x = document.forms["FORM"]["name"].value;
+  if (x == "") {
+    alert("Name is required");
+    return false;
+  }
+  var y = document.forms["FORM"]["contact"].value;
+  if (y.length!=10) {
+    alert("Enter a 10-digit phone number");
+    return false;
+  }
+</script>
+</head>
+<body>
+
+<form name="FORM" action="index.php" onsubmit="return validateForm()" method="post">
+  Name: <input type="text" name="name" required><br>
+  EMAIL<input type="email" name="email" required ><br>
+  CONTACT<input type="text" name="contact" pattern=[0-9]{10} required ><br>
+  GENDER <br>
+  <input type="radio" id="male" name="gender" value="male">
+  <label for="male">Male</label><br>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label><br>
+  <input type="radio" id="other" name="gender" value="other">
+  <label for="other">Other</label><br>
+  CITY<select  name="City" >
+                 <option>Mumbai</option>
+                 <option>Delhi</option>
+                 <option>Jaipur</option>
+                 <option>Mussorie</option>
+                 <option>Nainital</option>
+                 <option>Chennai</option>
+                 <option>Pune</option>
+                 <option>Banglore</option>
+                 <option>Hyderabad</option>
+                 <option>Lucknow</option>
+                 </select><br>
+
+  <input type="submit" name="submit" value="Submit">
+</form>
+
+</body>
+</html>
+
