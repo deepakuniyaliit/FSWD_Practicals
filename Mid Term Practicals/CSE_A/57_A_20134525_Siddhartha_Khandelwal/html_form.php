@@ -9,7 +9,7 @@
             email
             <input type="email" name="email" placeholder="email" required><br>
             contact
-            <input type="number" name="contact no." placeholder="contact no." minlength="10" maxlength="10" required ><br>
+            <input type="tel" name="contact no." placeholder="contact no." pattern="[0-9]{10} required ><br>
             gender
             Male<input type="radio" name="gender" value="male">
             Female<input type="radio" name="gender" value="female">
