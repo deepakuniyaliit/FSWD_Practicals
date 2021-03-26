@@ -1,4 +1,5 @@
 <?php
+    include_once("configuration.php");
     if(isset($_POST["submit"]))
     {
         $username=$_POST['username'];
@@ -7,29 +8,33 @@
         $contact=$_POST['contact'];
         $gender=$_POST['gender'];
         if(valid($username,$email,$city,$contact,$gender))
+        {
+            $sql = "INSERT INTO `users` (`username`, `email`, `gender`, `contact`,`city`) VALUES ('$username','$email','$gender','$contact','$city')";
+		    mysqli_query($conn,$sql);
             header("Location: index.php");
+        }
         else echo "Invalid";
     }
 
     function valid($username,$email,$city,$contact,$gender)
     {
-        if($username!=null || $username!="")
+        if($username!=null && $username!="")
         {
-            if($email!=null || $email!="")
+            if($email!=null && $email!="")
             {
-                if($city!=null || $city!="")
+                if($city!=null && $city!="")
                 {
-                    if($gender!=null || $gender!="")
+                    if($gender!=null && $gender!="")
                     {
-                        if($contact!=null or strlen($contact)==10)
+                        if($contact!=null && strlen($contact)==10)
                         {
-                            return "True";
+                            return true;
                         }
                     }
                 }
             }
         }
-        return "False";
+        return false;
     }
 ?>
 <html>
