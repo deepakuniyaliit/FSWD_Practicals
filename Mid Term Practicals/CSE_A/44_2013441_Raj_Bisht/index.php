@@ -43,7 +43,7 @@ include('configuration.php')
             <div>
              
                     <label for="contact">Contact: </label>
-                    <input type="text" id="number" name="number" placeholder="Contact Number" minlength="10" maxlength="10" required onkeypress="return event.charCode === 0 || /\d/.test(String.fromCharCode(event.charCode));">
+                    <input type="text" id="number" name="contact" placeholder="Contact Number" minlength="10" maxlength="10" required onkeypress="return event.charCode === 0 || /\d/.test(String.fromCharCode(event.charCode));">
                      <br><br>
             </div>
             <div>
