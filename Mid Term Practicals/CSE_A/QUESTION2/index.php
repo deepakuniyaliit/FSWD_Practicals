@@ -70,7 +70,7 @@ include('conn.php');
             <div class="enter4">Select City <br></div>
         </div>
         <div class="right">
-            <form action="index.php" method="post">
+            <form action="output.php" method="post">
                 <input type="text" name="username" placeholder="Enter here" required><br>
                 <input type="email" name="email" placeholder="Enter here" required><br>
                 <input type="text" name ="number"  placeholder="phone number" maxlength="10" minlength="10" required><br>
@@ -82,8 +82,7 @@ include('conn.php');
                 <label for="other">Other</label> <br>
 
                 <Select name="city">
-                    <option value="meerut">Meerut</option>
-                    <option value="delhi">Delhi</option>
+              
                     <option value="gzb">Ghaziabad</option>
                     <option value="haridwar">Haridwar</option>
                     <option value="nainital">Nainital</option>
@@ -99,5 +98,6 @@ include('conn.php');
 
     </div>
 </body>
+
 
 </html>
