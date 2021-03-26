@@ -4,7 +4,7 @@
         <title>Sample</title>
     </head>
     <body>
-        <form method = 'post' action = 'add.php'>
+        <form method = 'get' action = 'add.php'>
             <table>
                 <tr>
                     <td>Username:</td>
