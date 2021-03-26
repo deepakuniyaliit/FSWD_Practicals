@@ -37,7 +37,7 @@ if(isset($_POST['submit']))
       {	
   	}
       else{
-        $sql = "INSERT INTO users (username, email, gender, city) VALUES ('$username', '$email', '$gender', '$city')";
+        $sql = "INSERT INTO users (username, email, contact, gender, city) VALUES ('$username', '$email', '$contact', '$gender', '$city')";
         $result=mysqli_query($conn, $sql);
   	}
 }
