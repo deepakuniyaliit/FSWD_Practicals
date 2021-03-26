@@ -1,3 +1,19 @@
+<?php
+include('configuration.php');
+if(isset($_POST["submit"])){
+
+	$n=$_POST["name"];
+	$e=$_POST["email"];
+	$cn=$_POST["no"];
+	$g=$_POST["gender"];
+	$ct=$_POST["city"];
+
+    $sql="INSERT INTO users (username,email,contact,gender,city) VALUES ('$n','$e',$cn,'$g','$ct')";
+	mysqli_query($conn,$sql);
+} 
+	$sql="select * from users";
+	$res=mysqli_query($conn,$sql); 
+?>
 <html>
 <head>
 	<title>FORM</title>
@@ -22,7 +38,7 @@
 </head>
 <body>
 <h2>Please Enter Your Details</h2>
-<form method="POST" action="form.html">
+<form method="POST" action="form.php">
 <table  align="center"  cellspacing=" 25">
 	<tr>
 		<th>Name*</th>
@@ -63,5 +79,29 @@
 		<td><input id="submit" type="submit"  value="submit" name="submit"></td>
 	</tr>
 </table>
+</form>
+<?php if( $res->num_rows >0):?>
+<h2>Check Your Details</h2>
+
+	<table  align="center" cellpadding="10" >
+			<tr style="border: 3px solid green">
+				<th style="border: 3px solid green">Name</th>
+				<th style="border: 3px solid green">E-Mail</th>
+				<th style="border: 3px solid green">Contact</th>
+				<th style="border: 3px solid green">Gender</th>
+				<th style="border: 3px solid green">City</th>
+			</tr>
+			<?php while ( $row=mysqli_fetch_array($res)): ?>
+			<tr style="border: 3px solid green">
+			   <td style="border: 3px solid green; color: orange"><?php echo $row['username'] ?></td>
+			   <td style="border: 3px solid green; color: orange"><?php echo $row['email'] ?></td>
+			   <td style="border: 3px solid green; color: orange"><?php echo $row['contact'] ?></td>
+			    <td style="border: 3px solid green; color: orange"><?php echo $row['gender'] ?></td>
+			   <td style="border: 3px solid green; color: orange"><?php echo $row['city'] ?></td>
+			  </td>
+			</tr>
+		<?php endwhile;?>
+	</table>
+<?php endif;?>
 </body>
 </html>
