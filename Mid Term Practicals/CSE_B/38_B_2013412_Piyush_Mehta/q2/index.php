@@ -33,8 +33,7 @@ else
         Email<input type="email"  name="email"  required><br>
         Contact<input type="text"   name="contact" required><br>
         Gender:<br>
-        Male<input type="radio" id="male" name="gender" value="male"><br>
-        
+        Male<input type="radio" id="male" name="gender" value="male" ><br>
         Female<input type="radio" id="female" name="gender" value="female"><br>
         Other<input type="radio" id="other" name="gender" value="other"><br>
         Select City<select name="city" >
