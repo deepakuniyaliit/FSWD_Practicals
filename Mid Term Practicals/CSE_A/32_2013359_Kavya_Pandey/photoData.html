@@ -1,0 +1,21 @@
+<html>
+
+<head>
+    <title>Q1 Mid Sem</title>
+    <script type="text/javascript" src="photoData.js">
+    </script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var photosData = {};
+        for (i = 0; i < data.length; i++) {
+            var extractedUrl = data[i]["url"].substring(data[i]["url"].lastIndexOf('/') + 1);
+            photosData[data[i]["id"]] = [data[i]["albumId"], extractedUrl];
+        }
+
+        console.log(photosData);
+    </script>
+</body>
+
+</html>
