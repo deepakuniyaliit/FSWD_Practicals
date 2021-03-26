@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post">
+        <div><label for="username">Username : </label><input  type="text" name="username" required></div>
+        <div><label for="email">Email : </label><input name="email" type="email"></div>
+        <div><label for="contact">Contact No : </label><input name="contact" type="text" maxlength="10" pattern="\d{10}"></div>
+        <div><label>Gender : </label>
+            <div><input name="gender" type="radio" value="male"><label for="gender">Male</label></div>
+            <div><input name="gender" type="radio" value="female"><label for="gender">Female</label></div>
+            <div><input name="gender" type="radio" value="other"><label for="gender">Other</label></div>
+        </div>
+        <div>
+            <label for="city">City : </label>
+            <select name="city" id="city_dropdown">
+                <option value="" selected disabled hidden>Choose city...</option>
+            </select>
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</body>
+<script>
+    var cities = ["Mumbai", "Delhi", "Jaipur", "Mussoorie", "Nanital", "Chennai",
+"Pune", "Bangalore", "Hyderabad", "Lucknow"];
+    var dropdown = document.getElementById("city_dropdown");
+    cities.forEach(e=>{
+        dropdown.innerHTML += `<option value="${e}">${e}</option>`;
+    })
+</script>
+</html>
