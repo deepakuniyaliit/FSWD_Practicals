@@ -3,7 +3,7 @@
         <title>HTML Forms</title>
     </head>
 <body>
-<form method="GET" action="form.php">
+<form method="POST" action="form.php">
     USERNAME <input type="text" name="username" placeholder="Type Your Username" required><br>
     E-MAIL <input type="email" name="email" placeholder="Type Your E-mail" required><br>
     CONTACT <input type="tel" name="contact" placeholder="Type Your contact" pattern="[1-9]{1}[0-9]{9}" required><br>
