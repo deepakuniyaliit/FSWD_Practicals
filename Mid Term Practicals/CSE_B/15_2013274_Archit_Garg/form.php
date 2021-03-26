@@ -38,7 +38,7 @@ if(isset($_POST['submit']))
   	}
       else{
         $sql = "INSERT INTO users (username, email, gender, city) VALUES ('$username', '$email', '$gender', '$city')";
-        mysqli_query($conn, $sql);
+        $result=mysqli_query($conn, $sql);
   	}
 }
 else{
@@ -75,6 +75,7 @@ else{
         <option value="Lucknow">Lucknow</option>
     </select><br>
     <input type="submit" name="submit" value="Click Here To Submit Your Data">
+
 </form>
 </body>
 </html>
