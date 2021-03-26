@@ -50,6 +50,7 @@ validation($username,$email,$contact,$gender,$city);
             </div>
     <?php
     }
+}
     ?>
 </body>
 </html>
