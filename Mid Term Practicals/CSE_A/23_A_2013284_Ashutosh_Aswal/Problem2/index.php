@@ -23,7 +23,11 @@
         $city = $_POST['city'];
         if(validate($username, $gender, $email, $contact, $city))
         {
-            echo "valid Data";
+            $query = "INSERT INTO `users` (`id`, `username`, `gender`, `email`, `contact`, `city`) VALUES (NULL, '$username', '$gender', '$email', '$contact', '$city')";
+            if(mysqli_query($db, $query) == false)
+            {
+                echo "Insertion Failed!";
+            }
         }
         else
         {
