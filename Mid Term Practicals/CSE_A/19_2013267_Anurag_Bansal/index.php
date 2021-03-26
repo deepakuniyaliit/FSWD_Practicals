@@ -1,15 +1,16 @@
 <?php
-    if (isset($_POST['username'])) {
+    if (isset($_POST['username']) && strlen($_POST['username']!=0)) {
+
         $username = $_POST['username'];
     } else {
         $username = '';
     }
-    if (isset($_POST['email'])) {
+    if (isset($_POST['email']) && strlen($_POST['email']!=0) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $email = $_POST['email'];
     } else {
         $email = '';
     }
-    if (isset($_POST['gender'])) {
+    if (isset($_POST['gender']) && strlen($_POST['gender']!=0)) {
         $gender = $_POST['gender'];
     } else {
         $gender = '';
@@ -19,7 +20,7 @@
     } else {
         $city = '';
     }
-    if(isset($_POST['number'])){
+    if(isset($_POST['number']) && strlen($_POST['number']==10)){
         $number = $_POST['number'];
     }else{
         $number = '';
