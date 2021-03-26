@@ -1,30 +1,31 @@
 <?php
-    if (isset($_GET['username'])) {
-        $username = $_GET['username'];
+    if (isset($_POST['username'])) {
+        $username = $_POST['username'];
     } else {
         $username = '';
     }
-    if (isset($_GET['email'])) {
-        $email = $_GET['email'];
+    if (isset($_POST['email'])) {
+        $email = $_POST['email'];
     } else {
         $email = '';
     }
-    if (isset($_GET['gender'])) {
-        $gender = $_GET['gender'];
+    if (isset($_POST['gender'])) {
+        $gender = $_POST['gender'];
     } else {
         $gender = '';
     }
-    if (isset($_GET['city'])) {
-        $city = $_GET['city'];
+    if (isset($_POST['city'])) {
+        $city = $_POST['city'];
     } else {
         $city = '';
     }
-    if(isset($_GET['number'])){
-        $number = $_GET['number'];
+    if(isset($_POST['number'])){
+        $number = $_POST['number'];
     }else{
         $number = '';
     }
-?> 
+?>
+ 
 <?php
     if(strlen($number)!=10){
         echo '<script>alert("Invalid format")</script>';
@@ -52,7 +53,7 @@
             <div class="enter4">Select City <br></div>
         </div>
         <div class="right">
-            <form action="index.php" method="get">
+            <form action="index.php" method="POST">
                 <input type="text" name="username" placeholder="Enter here" required><br>
                 <input type="email" name="email" placeholder="Enter here" required><br>
                 <input type="tel" name="number" placeholder="Enter here"  maxlength="10" minlength="10" required> <br>
