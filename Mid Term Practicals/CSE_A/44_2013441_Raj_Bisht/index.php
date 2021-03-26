@@ -27,7 +27,7 @@ include('configuration.php')
         </title>
     </head>
     <body>
-    <form action="" method="POST" name="form" id="form">
+    <form action="index.php" method="POST" name="form" id="form">
             <div>
                 <label for="username">Username: </label>
                 <input type="text" id="username" name="username" placeholder="Username" required>
