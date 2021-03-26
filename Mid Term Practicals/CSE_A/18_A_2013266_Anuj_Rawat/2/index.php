@@ -1,3 +1,24 @@
+<!-- Creating entry into Table -->
+<?php
+if (isset($_POST['submit'])) {
+
+    $username = $_POST['username'];
+    $email =  $_POST['email'];
+    $contact =   $_POST['contact'];
+    $gender =  $_POST['gender'];
+    $city =  $_POST['city'];
+
+
+    $connection = mysqli_connect('localhost', 'root', '', 'webpractical');
+    if (!$connection) {
+        die("Database connection failed");
+    }
+    
+
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +33,7 @@
     <div class="container">
 
         <div class="col-sm-6">
-            <form name="myform" action="configure.php"  method="POST">
+            <form name="myform" action="index.php" method="POST">
 
 
                 <div class="form-group">
@@ -41,9 +62,9 @@
                 </div>
 
                 <div>
-                    <label for="cuty">Choose a city:</label>
+                    <label for="city">Choose a city:</label>
 
-                    <select name="cars" id="cars">
+                    <select name="city" id="city">
                         <option value="Mumbai">Mumbai</option>
                         <option value="Delhi">Delhi</option>
                         <option value="Jaipur">Jaipur</option>
