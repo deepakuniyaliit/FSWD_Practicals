@@ -10,10 +10,11 @@
     <form method="get">
         <div><label for="username">Username : </label><input  type="text" name="username" required></div>
         <div><label for="email">Email : </label><input name="email" type="email"></div>
-        <div><label for="contact">Contact No : </label><input name="contact" type="text"></div>
+        <div><label for="contact">Contact No : </label><input name="contact" type="text" maxlength="10" pattern="\d{10}"></div>
         <div><label>Gender : </label>
-            <div><input name="gender" type="radio" value="male"><label for="gender">Male : </label></div>
-            <div><input name="gender" type="radio" value="female"><label for="gender">Female : </label></div>
+            <div><input name="gender" type="radio" value="male"><label for="gender">Male</label></div>
+            <div><input name="gender" type="radio" value="female"><label for="gender">Female</label></div>
+            <div><input name="gender" type="radio" value="other"><label for="gender">Other</label></div>
         </div>
         <div>
             <label for="city">City : </label>
