@@ -3,7 +3,7 @@
         <title>HTML FORM</title>
     </head>
     <body>
-        <form method="GET" action="html_form.php">
+        <form method="POST" action="html_form.php">
             username
             <input type="text" name="username" placeholder="UserName" required><br>
             email
