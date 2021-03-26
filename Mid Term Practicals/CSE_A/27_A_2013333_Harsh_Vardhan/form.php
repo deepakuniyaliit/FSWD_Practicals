@@ -6,7 +6,7 @@
 
   </head>
   <body>
-    <form name="forms" method="get" action="form.php">
+    <form name="forms" method="post" action="form.php">
       USERNAME <input type="text" name="username" placeholder="Enter username" required><br>
       EMAIL <input type="email" name="email" placeholder="Enter your email" required><br>
       CONTACT <input type="text" name="contact" placeholder="Enter contact" required><br>
