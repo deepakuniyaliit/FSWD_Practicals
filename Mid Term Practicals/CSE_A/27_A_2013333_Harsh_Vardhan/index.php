@@ -14,6 +14,6 @@ if(isset($_POST['submit']))
   mysqli_query($conn,$sql);
 }
 else {
-  echo "Please click submit";
+  echo "Please click submit.";
 }
  ?>
