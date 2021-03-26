@@ -26,12 +26,6 @@
     }
 ?>
  
-<?php
-    if(strlen($number)!=10){
-        echo '<script>alert("Invalid format")</script>';
-    }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
