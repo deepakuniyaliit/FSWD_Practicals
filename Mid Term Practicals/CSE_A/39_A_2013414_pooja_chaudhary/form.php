@@ -3,7 +3,7 @@
   <title>html form</title>
 </head>
 <body>
-  <form name="myform" method="get" action="form.php" onsubmit="return validateForm()">
+  <form name="myform" method="post" action="form.php" onsubmit="return validateForm()">
     USERNAME <input type="text" name="username" placeholder="type your username" required><br>
     EMAIL <input type="email" name="email" placeholder="type your email" required><br>
     CONTACT <input type="text" name="contact" placeholder="type your contact" required><br>
