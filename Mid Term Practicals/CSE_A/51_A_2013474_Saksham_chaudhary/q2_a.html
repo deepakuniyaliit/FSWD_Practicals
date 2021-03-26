@@ -1,0 +1,93 @@
+<html>
+
+<head>
+    <title>Form</title>
+    <style type="text/css">
+        .input{
+            background-color: green;
+
+        }
+        .text{
+            text-align: center;
+            color: red;
+        }
+    </style>
+    <script type="text/javascript">
+        function validate(){
+            var na=document.form1.username;
+            var em=document.form1.email;
+            var ph=document.form1.phone;
+            var ge=document.form1.gender;
+            var ci=document.form1.city;
+              if (na.value.length<=0) {
+                alert("Please Enter a Name");
+                na.focus();
+                return false;
+           }
+             if (em.value.length<=0) {
+                alert("Please Enter a Email");
+                em.focus();
+                return false;
+           }
+             
+             if (ph.value.length<=0) {
+                alert("Please Enter a Phone number");
+                em.focus();
+                return false;
+           }
+         
+            if (ci.value=="Select City") {
+                alert("Please Select a city");
+                ci.focus();
+                return false;
+           }
+             var check=false;
+           for(var i = 0 ; i<ge.length;i++){
+            if (ge[i].checked) {
+                check=true;
+                break;
+            }
+           }
+             if (!check) {
+                alert("Please Select a Gender");
+                return false;
+           }
+           return true;
+        }
+    </script>
+</head>
+
+<body>
+    <h1 class="text">Form</h1>
+    <div align="center" class="input">
+        <table>
+    <form action="q1.html" method="GET" name="form1">
+        <tr><td>Name</td><td colspan="2"><input type="text" name="username" id="username"></td></tr>
+        <tr><td>E-Mail</td><td colspan="2"><input type="email" name="email" id="email" required></td></tr> 
+        <tr><td>Contact</td><td colspan="2"><input type="phone" name="phone" id="phone" minlength="10" required></td></tr> 
+        <tr><td>Gender</td><td><input type="radio" name="gender" value="Male">Male</td><td><input type="radio" name="gender" value="Female">Female</td></tr>       
+        <tr><td>City</td><td colspan="2"><select  name="city" id="city">
+                        <option value="Select City" selected>Select City</option>
+              			<option  value="dehradun">lukhnow</option>
+         				<option value="delhi">delhi</option>
+         				<option value="shimla">mumbai</option>
+         				<option value="lukhnow">jaipur</option>
+         				<option value="pune">mussorie</option>
+         				<option value="chandigarh">nainital</option>
+         				<option value="amritsar">chennai</option>
+         				<option value="jalandhar">pune</option>
+         				<option value="gurugram">Bangalore</option>
+         				<option value="patna">hyderabad</option>
+                 </select></td></tr>  
+            
+        <tr><td></td><td colspan="2" ><input type="submit" name="submit" value="SUBMIT" onclick=" return validate()"></td></tr>
+    </form>
+</table><br><br>
+
+  
+
+   
+</div>
+</body>
+
+</html>
