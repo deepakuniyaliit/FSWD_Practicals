@@ -2,14 +2,14 @@
 include('conn.php');
 ?>
 <?php
-    if (isset($_POST['username'])&& strlen($_POST['username'])!=0) {
+    if (isset($_POST['username']) ){
         $username = $_POST['username'];
     } else {
-        
-        echo "<script>alert('name should not be empty')</script>" ;
+        $username = " " ;
+       echo "<script>alert('name should not be empty')</script>" ;
 
     }
-    if (isset($_POST['email'])&& strlen($_POST['email'])!=0) {
+    if (isset($_POST['email'])) {
         $email = $_POST['email'];
         $email = $_POST ["email"];  
         $pattern = "^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$^";  
@@ -25,7 +25,7 @@ include('conn.php');
     } else {
         $gender = '';
     }
-    if (isset($_POST['city']) &&  strlen($_POST['city'])!=0) {
+    if (isset($_POST['city'])){
         $city = $_POST['city'];
     } else {
         $city = '';
@@ -41,12 +41,12 @@ include('conn.php');
         $number = '';
     }
 
-?>
 
-<?php
-    if(strlen($number)!=10){
-        echo '<script>alert("Invalid format")</script>';
-    }
+     $sql = "INSERT INTO `users` (`username`, `email`,`contact` ,`gender`, `city`) VALUES ('$username', '$email', '$number','$gender', '$city')";
+     mysqli_query($conn, $sql); 
+     echo"$number";
+
+
 ?>
 
 <!DOCTYPE html>
