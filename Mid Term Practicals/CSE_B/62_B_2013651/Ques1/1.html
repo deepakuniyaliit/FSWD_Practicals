@@ -1,0 +1,50 @@
+number <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>q2</title>
+  </head>
+  <body>
+    <form id="form" action="" method="GET">
+      <label for="num">Id: </label>
+      <input type="number" name="" id="num" min="1" max="5000" />
+      <input type="submit" />
+      <div class="data">
+        <h2 class="data__title" id="title"></h2>
+        <p class="data__url" id="url"></p>
+        <p class="data__thumbnailUrl" id="thumbnailUrl"></p>
+        <img id="image" src="" alt="" />
+      </div>
+    </form>
+    <script>
+      const numberEle = document.getElementById('num'),
+        formEle = document.getElementById('form'),
+        title = document.getElementById('title'),
+        url = document.getElementById('url'),
+        thumbnailUrl = document.getElementById('thumbnailUrl'),
+        image = document.getElementById('image');
+
+      const fetchData = async (numberValue) => {
+        const data = await fetch('./photos.json');
+        return await data
+          .json()
+          .then((res) => {
+            let found = res.find((photo) => photo.id == numberValue);
+            title.textContent = found.title;
+            url.textContent = found.url;
+            thumbnailUrl.textContent = found.thumbnailUrl;
+            image.setAttribute('src', found.url);
+          })
+          .catch((err) => console.log(err.message));
+      };
+
+      formEle.addEventListener('submit', (e) => {
+        e.preventDefault();
+        let numberValue = numberEle.value;
+        fetchData(numberValue);
+      });
+    </script>
+  </body>
+</html>
