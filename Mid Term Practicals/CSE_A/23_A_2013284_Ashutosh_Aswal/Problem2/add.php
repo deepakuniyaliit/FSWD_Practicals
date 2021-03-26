@@ -3,7 +3,7 @@
         <title>ADD</title>
     </head>
     <body>
-        <form method = 'get' action = 'add.php'>
+        <form method = 'post' action = 'add.php'>
             <table>
                 <tr>
                     <td>Username</td>
