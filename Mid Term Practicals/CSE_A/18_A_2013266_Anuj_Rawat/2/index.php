@@ -25,6 +25,15 @@ if (isset($_POST['submit'])) {
     } else if (strlen($contact) != 10) {
         die("Contact not 10 digit");
     }
+
+    $query = "INSERT INTO users(username, email, contact, gender, city) ";
+    $query .= "VALUES ('$username', '$email', '$contact', '$gender', '$city')";
+
+    $result = mysqli_query($connection, $query);
+
+    if (!$result) {
+        die('Query Failed');
+    }
 }
 
 ?>
