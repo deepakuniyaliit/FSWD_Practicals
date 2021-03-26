@@ -7,7 +7,7 @@
 
 
 <div class="container" style="position:relative; height:500px; width: 550px; top: 150px; left: 50px;">
-    <form action="index.php" method="GET">
+    <form action="index.php" method="POST">
         
         <label for="username"> Enter Username: </label> 
         <input type="text" id="username" name="username" autofocus="on" placeholder="Username"> <br>
