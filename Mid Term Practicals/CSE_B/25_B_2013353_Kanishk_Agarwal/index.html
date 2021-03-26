@@ -7,12 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="" method="GET">
+    <form action="forms.php" method="GET">
         <h3 class=a>Please Enter Your Details</h3>
-        <h4 class=a>Fill the application form below and submit</h4>
+        <h4 class=a>Fill the form below and submit</h4>
         Username            <input type="text" name="Username" placeholder="Username" required><br>
         Email address       <input type="email" name="email" placeholder="mail@example.com" required><br>    
-        Phone Number        <input type="number" maxlength="10" name="pno" placeholder="Phone Number" required><br>
+        Phone Number        <input type="number" maxlength="10" id="len" name="pno" placeholder="Phone Number" required onkeyup="check(); return false;" ><span id="message"></span><br>
+                            <script>src="valid.js"</script>
         Gender              <input type="radio" name="gender" value="Male" required>Male
                             <input type="radio" name="gender" value="Female" required>Female
                             <input type="radio" name="gender" value="Other" required>Other <br>
