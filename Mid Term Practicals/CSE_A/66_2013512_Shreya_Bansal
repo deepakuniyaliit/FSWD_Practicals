@@ -1,37 +1,27 @@
-<?php
-include('configuration.php');
-$query = "SELECT * FROM `users`";
-$result = mysqli_query($db, $query);
-if($result == false)
-{
-    echo "Invalid Select Query!";
-}
-else if($result->num_rows == 0)
-{
-    echo "Database is currently empty.";
-}
-?>
-
-<html>
-    <head>
-        <title>Database</title>
-    </head>
-    <body>
-        <?php if($result != false && $result->num_rows != 0):?>
-            <h2>Users Data-</h2>
-            <ol>
-                <?php while($row = $result->fetch_assoc()):?>
-                    <li> Details of user with ID = <?php echo $row['id']?></li>
-                    <ul style='list-style-type:disc'>
-                        <li>Username - <?php echo $row['username']?></li>
-                        <li>Email - <?php echo $row['email']?></li>
-                        <li>Contact - <?php echo $row['contact']?></li>
-                        <li>Gender - <?php echo $row['gender']?></li>
-                        <li>City - <?php echo $row['city']?></li>
-                    </ul>
-                <td>
-                <?php endwhile;?>
-            </ol>
-        <?php endif; ?>
-    </body>
-</html> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type = 'text/javascript' src = 'photos.json'></script>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        photosData = {};
+        for(var i = 0; i < data.length; ++i)
+        {
+            var curr = data[i];
+            var id = curr['id'];
+            var albumId = curr['albumId'];
+            var url = curr['url'];
+            var lastIdx = curr['url'].lastIndexOf('/');
+            var lastPart = url.substr(lastIdx + 1);
+            Var data = JSON.parse()
+            photosData[id] = [albumId, lastPart];
+        }
+        console.log(photosData);
+    </script>
+</body>
+</html>
