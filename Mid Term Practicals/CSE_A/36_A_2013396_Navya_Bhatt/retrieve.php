@@ -6,7 +6,7 @@ include_once('configuration.php');
     $result = mysqli_query($conn,$sql);
     if($result->num_rows > 0){
 ?>
-        <table border='1px'>
+       <table border='1px'>
             <thead>
                 <tr>
                     <th>UserName</th>
