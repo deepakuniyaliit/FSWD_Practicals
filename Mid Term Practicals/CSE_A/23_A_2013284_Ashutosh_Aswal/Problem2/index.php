@@ -1,5 +1,19 @@
 <?php
     include('configuration.php');
+    function validate($username, $gender, $email, $contact, $city)
+    {
+        if(empty($username) || empty($gender) || empty($email) || empty($contact) || empty($city))
+        {
+            return false;
+        }
+
+        if(strlen($contact) != 10)
+        {
+            return false;
+        }
+
+        return true;
+    }
     if(isset($_POST['Add']))
     {
         $username = $_POST['username'];
@@ -7,6 +21,14 @@
         $email = $_POST['email'];
         $contact = $_POST['contact'];
         $city = $_POST['city'];
+        if(validate($username, $gender, $email, $contact, $city))
+        {
+            echo "valid Data";
+        }
+        else
+        {
+            echo "Invalid Data!";
+        }
     }
 ?>
 <html>
