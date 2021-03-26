@@ -10,6 +10,9 @@ if(isset($_POST['submit']))
    $contact=test_input($_POST['contact']);
    $gender=test_input($_POST['gender']);
    $contact=test_input2($_POST['contact']);
+  // if($contact)
+   $sql = "INSERT INTO Users (username, email,city,contact,gender)
+   VALUES ('$username', '$email', '$city','$contact','$gender');"
    
 }
 function test_input($data)
