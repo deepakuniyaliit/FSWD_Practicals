@@ -10,8 +10,8 @@ include('configuration.php')
         $contact = $_POST['contact'];
         $gender = $_POST['gender'];
         $city = $_POST['city'];
-       // $sql = "INSERT INTO `users` (`id`, `username`, `email`, `contact`, `city`) VALUES (NULL, '$username', '$email', '$contact', '$city')";
-       // mysqli_query($conn, $sql);
+        $sql = "INSERT INTO `users` (`id`, `username`, `email`, `contact`, `gender`, `city`) VALUES (NULL, '$username', '$email', '$contact', '$gender , '$city')";
+        mysqli_query($conn, $sql);
        
 
     }
