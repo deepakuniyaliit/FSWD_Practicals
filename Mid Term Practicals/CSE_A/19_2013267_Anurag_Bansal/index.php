@@ -1,16 +1,20 @@
 <?php
-    if (isset($_POST['username']) && strlen($_POST['username']!=0)) {
+include('connection.php');
+?>
+
+<?php
+    if (isset($_POST['username'])) {
 
         $username = $_POST['username'];
     } else {
         $username = '';
     }
-    if (isset($_POST['email']) && strlen($_POST['email']!=0) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    if (isset($_POST['email'])) {
         $email = $_POST['email'];
     } else {
         $email = '';
     }
-    if (isset($_POST['gender']) && strlen($_POST['gender']!=0)) {
+    if (isset($_POST['gender'])) {
         $gender = $_POST['gender'];
     } else {
         $gender = '';
@@ -20,11 +24,17 @@
     } else {
         $city = '';
     }
-    if(isset($_POST['number']) && strlen($_POST['number']==10)){
+    if(isset($_POST['number'])){
         $number = $_POST['number'];
     }else{
         $number = '';
     }
+
+?>
+
+<?php
+$sql = "INSERT INTO `users`(`username`, `email`, `contact`,`gender`, `city`) VALUES ('$username','$email','$number','$gender','$city')";
+$res = mysqli_query($connection, $sql);
 ?>
  
 <!DOCTYPE html>

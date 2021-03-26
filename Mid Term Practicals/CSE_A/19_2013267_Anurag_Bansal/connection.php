@@ -2,7 +2,7 @@
 $hostname = "localhost";
 $username = "root";
 $password = "";
-$databasename = "WebPractical";
+$databasename = "webpractical";
 
 $connection = mysqli_connect($hostname,$username,$password,$databasename);
 if($connection)
