@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   	  <title>
+   	  	Forms 
+   	  </title>
+        <script> 
+function phonecheck(phoneNumber)
+{
+   var regEx = ^\+{0,2}([\-\. ])?(\(?\d{0,3}\))?([\-\. ])?\(?\d{0,3}\)?([\-\. ])?\d{3}([\-\. ])?\d{4};
+   if(phoneNumber.value.match(regEx))
+     {
+      return true;
+     }
+   else
+     {
+     alert("Please enter a valid phone number.");
+     return false;
+     }
+}    
+</script>
+   </head>
+   <body>
+   	   <form name="f1" action="" method="get">
+   	   	  <div>
+   	   	  	Username<br><input type="text" name="username" required>
+   	   	  </div>
+   	   	  <div>
+   	   	  	Email<br><input type="Email" required placeholder="abc@gmail.com">
+   	   	  </div>
+   	   	  <div>
+   	   	  	Contact<br><input type="text" name="phone" required>
+   	   	  </div>
+              <div>
+               <p>Gender</p>
+               <input type="radio" name="gender" value="male">Male<br>
+               <input type="radio" name="gender" value="female">Female<br>
+               <input type="radio" name="gender" value="other">Other<br>
+              </div>
+              <div>
+                <select name="city">
+                 <option>Mumbai</option>
+                 <option>Delhi</option>
+                 <option>Jaipur</option>
+                 <option>Mussorie</option>
+                 <option>Nanital</option>
+                 <option>Chennai</option>
+                 <option>Pune</option>
+                 <option>Bangalore</option>
+                 <option>Hyderabad</option>
+                 <option>Lucknow</option>
+                </select>
+              </div>
+   	   	  <div>
+   	   	  	<br><input type="submit" name="submit" value="Submit" onclick="phonecheck(document.f1.phone)">
+   	   	  </div>
+   	   </form>
+   </body>
+</html>
