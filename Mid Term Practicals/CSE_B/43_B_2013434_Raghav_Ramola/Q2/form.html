@@ -4,6 +4,30 @@
     <title>
         Login
     </title>
+    <script>
+        function validateForm() {
+            var x = document.forms["FORM"]["name"].value;
+            if (x == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+            var y = document.forms["FORM"]["contact"].value;
+            if (y.length != 10) {
+                alert("length must be 10");
+                return false;
+            }
+            var le = document.getElementsByTagName("input");
+            var c = 0;
+            for (var i = 0; i < le.length; ++i) {
+                if (le[i].type == "checkbox" && le[i].checked == true) {
+                    c++;
+                }
+            }
+            if (c < 3 || c > 5) { alert("At least 3 interests and at max 5 interests"); return false; }
+            return true;
+
+        }
+    </script>
 </head>
 
 <body>
@@ -22,7 +46,7 @@
             Phone :
         </label>
         <input inputmode="numeric" name="country code" value="+91" size="2" />
-        <input inputmode="numeric" name="phone" minLength={10} maxLength={10} /> <br> <br>
+        <input inputmode="numeric" name="phone" required /> <br> <br>
 
         <br>
         <br>
