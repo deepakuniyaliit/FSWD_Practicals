@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="col-sm-6">
+            <form action="index.html" method="GET">
+
+
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="contact">Contact</label>
+                    <input type="text" name="contact" class="form-control">
+                </div>
+
+                <div>
+                    <p><strong>GENDER</strong></p>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label><br>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label><br>
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Other</label>
+                </div>
+
+                <div>
+                    <label for="cuty">Choose a city:</label>
+
+                    <select name="cars" id="cars">
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Jaipur">Jaipur</option>
+                        <option value="Mussoori">Mussoori</option>
+                        <option value="Nanital">Mussoori</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Bangalore">Bangalore</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Lucknow">Lucknow</option>
+                    </select>
+                </div>
+
+                <input class="btn btn-primary" type="submit" name="submit" value="Submit">
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
