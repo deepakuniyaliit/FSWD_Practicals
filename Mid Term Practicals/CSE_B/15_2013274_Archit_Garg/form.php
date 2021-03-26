@@ -7,6 +7,26 @@ if(isset($_POST['submit']))
     $contact = $_POST['contact'];
     $gender = $_POST['gender'];
     $city = $_POST['city'];
+
+    if (empty($username)) {
+        echo "Username is empty";
+      }
+      if (empty($email)) {
+        echo "email is empty";
+      }
+      if (empty($contact)) {
+        echo "contact is empty";
+      }
+      if (empty($gender)) {
+        echo "gender is empty";
+      }
+      if (empty($city)) {
+        echo "city is empty";
+      }
+      $length = strlen ($contact);  
+      if ( $length < 10 && $length > 10) {  
+        echo "Mobile must have 10 digits.";
+    }
 }
 else{
     echo "Please click submit button to submit the data..";
