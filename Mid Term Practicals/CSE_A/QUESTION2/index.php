@@ -1,4 +1,7 @@
 <?php
+include('conn.php');
+?>
+<?php
     if (isset($_POST['username'])) {
         $username = $_POST['username'];
     } else {
