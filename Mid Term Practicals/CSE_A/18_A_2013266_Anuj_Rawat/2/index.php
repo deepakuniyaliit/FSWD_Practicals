@@ -13,8 +13,18 @@ if (isset($_POST['submit'])) {
     if (!$connection) {
         die("Database connection failed");
     }
-    
 
+    if (
+        strlen($username) == 0 ||
+        strlen($email) == 0 ||
+        strlen($contact) == 0 ||
+        strlen($contact) == 0 ||
+        strlen($city) == 0
+    ) {
+        die("Empty Cell");
+    } else if (strlen($contact) != 10) {
+        die("Contact not 10 digit");
+    }
 }
 
 ?>
@@ -52,13 +62,10 @@ if (isset($_POST['submit'])) {
                 </div>
 
                 <div>
-                    <p><strong>GENDER</strong></p>
-                    <input type="radio" id="male" name="gender" value="male">
-                    <label for="male">Male</label><br>
-                    <input type="radio" id="female" name="gender" value="female">
-                    <label for="female">Female</label><br>
-                    <input type="radio" id="other" name="gender" value="other">
-                    <label for="other">Other</label>
+                    Select Gender -
+                    Male <input type="radio" name="gender" value="M" checked>
+                    Female <input type="radio" name="gender" value="F">
+                    Other <input type="radio" name="gender" value="O">
                 </div>
 
                 <div>
