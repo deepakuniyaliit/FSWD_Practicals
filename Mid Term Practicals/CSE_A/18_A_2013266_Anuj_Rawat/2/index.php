@@ -34,6 +34,14 @@ if (isset($_POST['submit'])) {
     if (!$result) {
         die('Query Failed');
     }
+
+    $query = "SELECT * FROM users";
+
+    $result = mysqli_query($connection, $query);
+
+    if (!$result) {
+        die('Query Failed');
+    }
 }
 
 ?>
@@ -95,6 +103,23 @@ if (isset($_POST['submit'])) {
                 </div>
 
                 <input class="btn btn-primary" type="submit" name="submit" value="Submit">
+               
+                <br>
+                <br>
+                Output
+                <div class="container">
+
+                    <div class="">
+
+                        <?php
+                        while (mysqli_fetch_row($result)) {
+                            $row = mysqli_fetch_assoc($result);
+                            print_r($row);
+                            echo '<br>';
+                        }
+                        ?>
+                    </div>
+                </div>
 
 
 
