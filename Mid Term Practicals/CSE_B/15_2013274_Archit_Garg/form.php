@@ -1,3 +1,6 @@
+<?php
+include 'configuration.php';
+?>
 
 <?php
 if(isset($_POST['submit']))
@@ -27,6 +30,16 @@ if(isset($_POST['submit']))
       if ( $length < 10 && $length > 10) {  
         echo "Mobile must have 10 digits.";
     }
+
+    $sql_u = "SELECT * FROM users WHERE username='$username'";
+  	$res_u = mysqli_query($conn, $sql_u);
+      if (mysqli_num_rows($res_u) > 0) 
+      {	
+  	}
+      else{
+        $sql = "INSERT INTO users (username, email, gender, city) VALUES ('$username', '$email', '$gender', '$city')";
+        mysqli_query($conn, $sql);
+  	}
 }
 else{
     echo "Please click submit button to submit the data..";
