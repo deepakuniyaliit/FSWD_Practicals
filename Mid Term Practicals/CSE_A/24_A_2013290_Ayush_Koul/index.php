@@ -1,16 +1,13 @@
 <?php
-$hostname = 'localhost';
-$username = 'root';
-$password = '';
-$database_name = 'webpractical';
-$conn = mysqli_connect($hostname, $username, $password, $database_name);
-if (isset($_POST["submit"])) {
-	$un = $_POST["username"];
-	$e = $_POST["email"];
-	$c = $_POST["phone"];
-	$g = $_POST["gender"];
-	$ct = $_POST["city"];
-	$sql = "INSERT INTO users (`username`,`email`,`contact`,`gender`,`city`) VALUES ('$un','$e','$c', '$g','$ct')";
-	mysqli_query($conn, $sql);
-}
+    include('configuration.php');
+    
+    function validate($un, $g, $e, $c, $ct)
+    {
+        if(empty($un) || empty($g) || empty($e) || empty($c) || empty($ct))
+            return false;
+        else if(strlen($c) != 10)
+            return false;
+        else 
+            return true;
+    }
 ?>
