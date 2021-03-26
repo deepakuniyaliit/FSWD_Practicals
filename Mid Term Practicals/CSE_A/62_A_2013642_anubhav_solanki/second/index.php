@@ -16,4 +16,7 @@ validation($username,$email,$contact,$gender,$city);
             $flag = false;
         }
     }
+
+    $sql = "INSERT INTO `users` (`id`, `username`, `email`, `gender`, `city`, `contact`) VALUES (NULL, '$username', '$email', '$gender', '$city','$contact')";
+    mysqli_query($conn,$sql);
 ?>
