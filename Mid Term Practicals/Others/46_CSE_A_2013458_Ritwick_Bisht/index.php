@@ -6,7 +6,30 @@
         $city=$_POST['city'];
         $contact=$_POST['contact'];
         $gender=$_POST['gender'];
-        header("Location: index.php");
+        if(valid($username,$email,$city,$contact,$gender))
+            header("Location: index.php");
+        else echo "Invalid";
+    }
+
+    function valid($username,$email,$city,$contact,$gender)
+    {
+        if($username!=null || $username!="")
+        {
+            if($email!=null || $email!="")
+            {
+                if($city!=null || $city!="")
+                {
+                    if($gender!=null || $gender!="")
+                    {
+                        if($contact!=null or strlen($contact)==10)
+                        {
+                            return "True";
+                        }
+                    }
+                }
+            }
+        }
+        return "False";
     }
 ?>
 <html>
