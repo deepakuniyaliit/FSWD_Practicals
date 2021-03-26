@@ -9,6 +9,8 @@ if(isset($_POST['submit']))
     $gender=$_POST['gender'];
     $city=$_POST['city'];
     $contact=$_POST['contact'];
+    $sql="INSERT INTO `users` (`id`, `username`, `email`, `gender`, `city`) VALUES (NULL, '$username', '$email', '$gender', '$city')";
+    mysqli_query($conn,$sql);
 }
 if(empty($username)||empty($email)||empty($gender)||empty($city)||empty($contact))
 {
