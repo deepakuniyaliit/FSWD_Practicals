@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practical form</title>
+
+    <script>
+        function form_validate() {
+            var username = document.forms["form"]["username"].value;
+            if (username == "") {
+                alert("First fill the username..The field cannot be left empty");
+                return false;
+            }
+            var email = document.forms["form"]["email"].value;
+            if (email == "") {
+                alert("Email is invalid");
+                email.focus();
+                return false;
+            }
+
+            if (email.indexOf("@") <= 0) {
+                alert("Invalid email id..try again");
+                email.focus();
+                return false;
+            }
+
+            if ((email.charAt(email.length - 4) != '.') && (email.charAt(email.length - 3) != '.')) {
+                alert(". invalid position");
+                email.focus();
+                return false;
+            }
+
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <form method="GET" name="form">
+        Username:<input type="text" name="username" id="username" required /><br><br>
+        Email:<input type="text" name="email" id="email" required /><br><br>
+        Contact:<input type="number" name="number" id="number" minlength="10" maxlength="10" /><br><br>
+
+        <input type="radio" name="gender" id="gender" value="male"> MALE </input>
+        <input type="radio" name="gender" id="gender" value="female"> FEMALE </input>
+        <input type="radio" name="gender" id="gender" value="other"> OTHER </input>
+
+        <br>
+        <br>
+
+        <label> CITY: </label>
+        <select>
+            <option value="mumbai"> MUMBAI </option>
+            <option value="delhi"> DELHI </option>
+            <option value="jaipur"> JAIPUR </option>
+            <option value="mussorie"> MUSSORIE </option>
+            <option value="nainital"> NAINITAL </option>
+            <option value="pune"> PUNE </option>
+            <option value="banglore"> BANGLORE </option>
+            <option value="hydrabad"> HYDRABAD </option>
+            <option value="lucknow"> LUCKNOW </option>
+            <option value="chennai"> CHENNAI </option>
+        </select>
+        <input type="submit" name="submit" value="submit" onclick="form_validate()">
+    </form>
+
+</body>
+
+</html>
