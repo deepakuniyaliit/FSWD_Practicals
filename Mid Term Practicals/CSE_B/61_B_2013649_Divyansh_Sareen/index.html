@@ -7,6 +7,34 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>sample commit</h1>
+    <script>
+        fetch("./photos.json")
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                appendData(data);
+                console.log(data[0])
+            })
+            .catch(function (err) {
+                console.log("error: " + err);
+            });
+
+        function appendData(data) {
+            var mainContainer = document.getElementById("myData");
+            for (var i = 0; i < data.length; i++) {
+                // mainContainer.appendChild(div);
+                // console.log(data[i].id);
+                var id = data[i].id;
+                var albumid = data[i].albumId;
+                var url = data[i].url;
+                var a = url.split("/");
+                var b = a[a.length-1];
+                var obj = { id: [albumid, b] }
+                console.log(obj);
+            }
+
+        }
+    </script>
 </body>
 </html>
