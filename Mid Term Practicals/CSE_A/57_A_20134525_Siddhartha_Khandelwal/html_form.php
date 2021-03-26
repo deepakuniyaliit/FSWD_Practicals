@@ -15,7 +15,7 @@
 ?>
 <html>
     <head>
-        <title>HTML FORM</title>
+       <title>HTML FORM</title>
     </head>
     <body>
         <form method="POST" action="html_form.php">
