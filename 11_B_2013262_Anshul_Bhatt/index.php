@@ -10,6 +10,18 @@ if(isset($_POST['submit']))
     $city=$_POST['city'];
     $contact=$_POST['contact'];
 }
+if(empty($username)||empty($email)||empty($gender)||empty($city)||empty($contact))
+{
+    echo"empty";
+}
+else{
+    echo"not empty";
+}
+if(preg_match("/^[0-9]{3}-[0-9]{4}-[0-9]{4}$/", $contact)) {
+    echo "phone is valid";
+  }
+  else echo"not valid";
+
 else{
    echo "please click on submit button ...";
 }
