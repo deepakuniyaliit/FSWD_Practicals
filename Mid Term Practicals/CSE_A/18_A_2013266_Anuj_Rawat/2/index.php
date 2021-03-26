@@ -56,11 +56,17 @@ if (isset($_POST['submit'])) {
 
 </head>
 
+<script>
+    function validate() {
+       alert("hi");
+    }
+</script>
+
 <body>
     <div class="container">
 
         <div class="col-sm-6">
-            <form name="myform" action="index.php" method="POST">
+            <form name="myform" action="index.php" method="POST" onsubmit="return validate()">
 
 
                 <div class="form-group">
@@ -103,7 +109,7 @@ if (isset($_POST['submit'])) {
                 </div>
 
                 <input class="btn btn-primary" type="submit" name="submit" value="Submit">
-               
+
                 <br>
                 <br>
                 Output
