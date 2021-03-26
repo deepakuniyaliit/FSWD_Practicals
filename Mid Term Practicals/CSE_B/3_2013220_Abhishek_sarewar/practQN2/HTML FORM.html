@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>FORM</title>
+    <style>
+        form{
+            border:1px solid black;
+            width:400px;
+            height:300px;
+        }
+    </style>
+</head>
+<body>
+    
+    <form action="HTMLFORM.html" method="POST">
+        USERNAME <input type="text" name = "username"placeholder = "Enter your Name" required> <br>
+        EMAIL <input type = "email" name = "email" placeholder = "Enter your mail"><br>
+        PHONE <input type="tel" name="telphone" placeholder="" maxlength="10" required/>  <br>
+        GENDER<input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label> 
+        <br>
+        <label for="cars">SELECT CITY:</label>
+        <select name="city" id="city">
+          <option value="Mumbai">Mumbai</option>
+          <option value="Delhi">Delhi</option>
+          <option value="Jaipur">Jaipur</option>
+          <option value="Mussorie">Mussorie</option>
+          <option value="Nainital">Nainital</option>
+          <option value="Chennai">Chennai</option>
+          <option value="Pune">Pune</option>
+          <option value="Banglore">Banglore</option>
+          <option value="Hyderabad">Hyderabad</option>
+          <option value="Lucknow">Lucknow</option>
+        </select> <br>
+        <input type="submit" name="submit">
+    </form>
+
+</body>
+</html>
