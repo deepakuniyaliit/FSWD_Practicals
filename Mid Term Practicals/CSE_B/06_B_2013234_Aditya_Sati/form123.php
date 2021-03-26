@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   <body>
-   <form action="form.php" method="GET">
+   <form action="form.php" method="POST">
         <h4 class=a>Application Form:</h4>
         Username:            <input type="text" name="username" placeholder="john" required><br>
         Email:       <input type="email" name="email" placeholder="john@xyz.com" required><br>    
