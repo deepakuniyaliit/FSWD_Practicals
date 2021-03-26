@@ -12,7 +12,7 @@ include('configuration.php')
         $city = $_POST['city'];
        // $sql = "INSERT INTO `users` (`id`, `username`, `email`, `contact`, `city`) VALUES (NULL, '$username', '$email', '$contact', '$city')";
        // mysqli_query($conn, $sql);
-       echo "$username <br> $email";
+       
 
     }
     else
@@ -20,6 +20,34 @@ include('configuration.php')
         echo "Please click submit button";
     }
 ?>
+<?php
+$usernameErr = $emailErr = $contactErr = $cityErr = $genderErr="";
+if(isset($_POST['submit']))
+{
+    if (empty($_POST['username'])) {
+        $usernameErr = "User Name is required";
+      }
+      if (empty($_POST['email'])) {
+        $emailErr = "Email is required";
+      }
+      if (empty($_POST['contact'])) {
+        $contactErr = "Contact is required";
+      }
+      if (empty($_POST['city'])) {
+        $cityErr = "City is required";
+      }
+      if (empty($_POST['genderErr'])) {
+        $genderErr = "Gender is required";
+      }
+}
+
+?>
+
+
+
+
+
+
 <html>
     <head>
         <title>
@@ -29,11 +57,15 @@ include('configuration.php')
     <body>
         <form method="POST" action="index.php">
             Username <input type="text" name="username" placeholder="Enter Username" required><br>
+           
             Email <input type="email" name="email" placeholder="Enter Email"><br>
+            
             Contact <input type="number"  name="contact" min="1000000000" max="10000000000"  placeholder="Enter Contact Number"><br>
+           
             Gender - <br>
             Male <input type="radio" value="M" name="gender">
             Female <input type="radio" value="F" name="gender"><br>
+            
           <br>Select Your city<br>
           <select name="city">
             Mumbai, Delhi, Jaipur, Mussoorie, Nanital, Chennai,
@@ -48,6 +80,7 @@ include('configuration.php')
             <option value="Bangalore">Bangalore</option>
             <option value="Hyderabad">Hyderabad</option>
             <option value="Lucknow">Lucknow</option>
+            
 
           </select><br>
             <input type="submit" name="submit" value="click here to submit">
