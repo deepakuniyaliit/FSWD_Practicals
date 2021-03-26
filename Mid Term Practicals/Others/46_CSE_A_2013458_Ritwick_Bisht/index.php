@@ -1,12 +1,12 @@
 <?php
-    if(isset($_POST["Submit"]))
+    if(isset($_POST["submit"]))
     {
         $username=$_POST['username'];
         $email=$_POST['email'];
         $city=$_POST['city'];
         $contact=$_POST['contact'];
         $gender=$_POST['gender'];
-        header("Location:index.php");
+        header("Location: index.php");
     }
 ?>
 <html>
@@ -33,7 +33,7 @@
                 <option value="hydrabad">Hydrabad</option>
                 <option value="lucknow">Lucknow</option>
             </select><br>
-            <input type="submit" value="Submit">
+            <input type="submit" name="submit" value="Submit">
         </form>
     </body>
 </html>
