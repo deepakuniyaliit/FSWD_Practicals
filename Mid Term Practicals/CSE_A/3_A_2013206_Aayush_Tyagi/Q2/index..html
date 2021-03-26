@@ -1,21 +1,6 @@
 <!DOCTYPE html>
 <html>
-<?php
-include('config.php');
-?>
-<?php
 
-if(isset($_POST['submit'])){
-    $username = $_POST['username'];
-    $email = $_POST['email'];
-    $gender = $_POST['gender'];
-    $contact = $_POST['contact'];
-	$city = $_POST['city'];
-	$sql =  "INSERT INTO `users` (`username`, `email`, `gender`, `city`,`contact`) VALUES ('$username', '$email', '$gender', '$city','contact')";
-			$a = mysqli_query($conn , $sql);
-
-}
-?>
 <head>
 
     <title>form</title>
