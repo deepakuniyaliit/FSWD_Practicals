@@ -31,8 +31,7 @@
             </div>
             <ul class="nav navbar-nav">
                 <li><a href="index.php">Student Info Form</a></li>
-                <li><a href="display.php">Student List</a></li>
-                <li><a href="edit.php">Page 3</a></li>
+                <li><a href="output.php">Student List</a></li>
             </ul>
         </div>
     </nav>
