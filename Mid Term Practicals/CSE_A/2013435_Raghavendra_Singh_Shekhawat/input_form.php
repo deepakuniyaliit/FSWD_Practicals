@@ -24,18 +24,8 @@
             <option value="Mumbai">Mumbai</label>
             <option value="Delhi">Delhi</label>
             <option value="Mussoorie">Mussoorie</label>
-<?php
-
-    $conn = mysqli_connect('localhost', 'raghavendra', 'aabbccdd', 'Webpractical');
-
-    if(!$conn){
-        echo "Connection error" . mysqli_connect_error();
-    }
-    else{
-        echo "Connection Successfull!!";
-    }
-
-?>            <option value="Chennai">Chennai</label>
+            <option value="Nanital">Nanital</label>
+            <option value="Chennai">Chennai</label>
             <option value="Pune">Pune</label>
             <option value="Bangalore">Bangalore</label>
             <option value="Hyderabad">Hyderabad</label>
@@ -44,6 +34,3 @@
         <input type="submit" name="submit" value="submit">
     </form>
 </div>
-
- 
-
