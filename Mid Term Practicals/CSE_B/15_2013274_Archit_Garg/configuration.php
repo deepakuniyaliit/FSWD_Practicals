@@ -2,7 +2,7 @@
 $hostname = "127.0.0.1";
 $username = "root";
 $password = "";
-$databasename = "midsem";
+$databasename = "webpractical";
 
 $conn = mysqli_connect($hostname, $username, $password, $databasename);
 if($conn){
