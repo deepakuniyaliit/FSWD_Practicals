@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Form</title>
+    </head>
+    <body>
+        <form method="POST" action="pform.html">
+            <label>User name</label>
+            <input type="text" name="username" required><br>
+            <label>Email</label>
+            <input type="email" name="email" required><br>
+            <label>phoneno</label>
+            <input type="tel" pattern="^\d{3}-\d{3}-\d{4}$"  name="phoneno" required ><br>
+<label>Gender:</label><br>
+<input type="radio" id="male" name="gender" value="male" required>
+<label for="male">Male</label><br>
+<input type="radio" id="female" name="gender" value="female" required>
+<label for="female">Female</label><br>
+<input type="radio" id="other" name="gender" value="other" required>
+<label for="other">Other</label><br>
+<label>City:</label><br>
+<select name="city" required>
+    <option value="Dehradun">Dehradun</option>
+    <option value="Pune">Pune</option>
+    <option value="Mumbai">Mumbai</option>
+    <option value="Bangalore">Bihar</option>
+    <option value="Maharastra">Maharastra</option>
+    <option value="Chennai">Chennai</option>
+    <option value="Jaipur">jaipur</option>
+    <option value="Punjab">Punjab</option>
+    <option value="Delhi">Delhi</option>
+    <option value="Other">Other</option>
+</select><br>
+<input type="submit" name="submit" >
+</form>
+        </form>
+    </body>
+</html>
