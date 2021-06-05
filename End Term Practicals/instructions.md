@@ -18,3 +18,4 @@
   - For practice purpose you should use [another GitHub Repository](https://github.com/deepakuniyaliit/webPractice).
   - Create a separate directory in the format as mentioned above, inside directory **End Term Practice** inside your corresponding directories.
   - In case you face any issues and are not able to resolve using any of the given resources, you can contact your subject faculty.
+  - You can also try to attempt the [Mid Term Question Paper](https://github.com/deepakuniyaliit/FSWD_Practicals/blob/main/Mid%20Term%20Practicals/6thSemCSEAB.pdf) for practice purpose.
