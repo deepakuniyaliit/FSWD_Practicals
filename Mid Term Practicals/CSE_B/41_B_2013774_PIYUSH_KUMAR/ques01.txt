@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1</title>
+</head>
+<body>
+    <div id = "img">
+    </div>
+    <script>
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+            // Typical action to be performed when the document is ready:
+            //document.getElementById("img").innerHTML = xhttp.responseText;
+            var data = xhttp.responseText;
+            //var obj1 = data;
+            var data1 = JSON.parse(data);
+            document.getElementById("img").innerHTML += "{";
+            for(var i = 0; i < data1.length; i++){
+                var str = data1[i].url;
+                var u = str.slice(str.lastIndexOf("/") + 1, str.length);
+                document.getElementById("img").innerHTML += data1[i].id + ":[" + data1[i].albumId + ",'" + u + "'], " ;
+            }
+            document.getElementById("img").innerHTML += "}";
+        }
+        }
+        xhttp.open("GET", "photos.json", true);
+        xhttp.send();
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	<script src="index.js"></script>
+</head>
+
+<body>
+	<script type="text/javascript">
+		photosData = {}
+		for (var i = 0; i < data.length; i++) {
+			var m = data[i]['url']
+			m = m.substr(-6);
+			photosData[data[i]["id"]] = [data[i]["albumId"], m]
+		}
+	</script>
+</body>
+
+</html>

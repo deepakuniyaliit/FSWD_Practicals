@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Application Form</title>
+</head>
+<body>
+  <form action="form.html" method="GET">
+        <h4 class=a>Application Form:</h4>
+        Username:            <input type="text" name="Username" placeholder="john" required><br>
+        Email:       <input type="email" name="email" placeholder="john@xyz.com" required><br>    
+        Contact:        <input type="number" maxlength="10" name="pno" placeholder="0123456789" required><br>
+        Gender: <input type="radio" name="gender" value="Male" required>Male
+                <input type="radio" name="gender" value="Female" required>Female
+              <input type="radio" name="gender" value="Other" required>Other <br>
+        City:                <select id="city" name="city">
+                                <option  selected disabled>None</option>
+                                <option >Mumbai</option>
+                                <option>Delhi</option>
+                                <option>Jaipur</option>
+                                <option>Mussoorie</option>
+                                <option>Nanital</option>
+                                <option>Chennai</option>
+                                <option>Pune</option>
+                                <option>Bangalore</option>
+                                <option>Hyderabad</option>
+                                <option>Lucknow</option>
+                            </select><br>
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
