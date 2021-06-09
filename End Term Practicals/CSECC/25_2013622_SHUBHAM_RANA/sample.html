@@ -1,0 +1,41 @@
+<html>
+
+<body>
+
+
+
+<p id="demo"></p>
+
+<script>
+
+var xmlhttp = new XMLHttpRequest();
+
+xmlhttp.onreadystatechange = function() {
+
+  if (this.readyState == 4 && this.status == 200) 
+
+  {
+
+    var myObj = JSON.parse(this.responseText);
+
+    document.getElementById("demo0").innerHTML = myObj.pets[2].animal;
+
+    myObj1=new Date( myObj.birth);
+
+    document.getElementById("demo1").innerHTML=myObj1;
+
+  }
+
+};
+
+xmlhttp.open("GET", "json_demo.json", true);
+
+xmlhttp.send();
+
+</script>
+
+
+
+</body>
+
+</html>
