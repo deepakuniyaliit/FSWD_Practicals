@@ -1,0 +1,273 @@
+<html>  
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<style>  
+body{  
+  font-family: Calibri, Helvetica, sans-serif;  
+  background-color:purple;  
+}  
+.container {  
+    padding: 50px;  
+  background-color: lightpink;  
+}  
+  
+input[type=text], input[type=password], textarea {  
+  width: 100%;  
+  padding: 15px;  
+  margin: 5px 0 30px 0;  
+  display: inline-block;  
+  border: none;  
+  background: #f1f1f1;  
+}  
+input[type=text]:focus, input[type=password]:focus {  
+  background-color: orange;  
+  outline: none;  
+}  
+ div {  
+            padding: 10px 0;  
+         }  
+hr {  
+  border: 1px solid #f1f1f1;  
+  margin-bottom: 25px;  
+}  
+.registerbtn {  
+  background-color: #4CAF50;  
+  color: white;  
+  padding: 16px 20px;  
+  margin: 8px 0;  
+  border: none;  
+  cursor: pointer;  
+  width: 100%;  
+  opacity: 0.9;  
+}  
+.registerbtn:hover {  
+  opacity: 1;  
+}  
+</style>  
+</head>  
+<body>  
+<form>  
+  <div class="container">  
+  <center>  <h1> Student Admission Form</h1> </center>  
+  <hr>  
+
+  
+<label> Firstname </label>         
+<input type="text" name="firstname" size="15"/> <br> <br>  
+<label> Middlename: </label>     
+<input type="text" name="middlename" size="15"/> <br> <br>  
+<label> Lastname: </label>         
+<input type="text" name="lastname" size="15"/> <br> <br>  
+<label> Fathername </label>         
+<input type="text" name="firstname" size="15"/> <br> <br>  
+<label> Mothername </label>         
+<input type="text" name="firstname" size="15"/> <br> <br>  
+
+<label>
+Class X:
+</label><br>
+<br>
+
+<label> Board * </label>         
+<input type="text" name="Board" size="25"/> <br> <br>  
+<label>School *</label>     
+<input type="text" name="School" size="25"/> <br> <br>  
+<label> Roll No. *</label>         
+<input type="text" name="Roll No." size="25"/> <br> <br>  
+<label> Passing year *</label>         
+<input type="text" name="Passing year" size="25"/> <br> <br>  
+<label> Aggregate percentage * </label>         
+<input type="text" name="Aggregate percentage" size="15"/> <br> <br>  
+
+<label>
+Class XII:
+</label><br>
+<br>
+
+<label> Board * </label>         
+<input type="text" name="Board" size="25"/> <br> <br>  
+<label>School *</label>     
+<input type="text" name="School" size="25"/> <br> <br>  
+<label> Roll No. *</label>         
+<input type="text" name="Roll No." size="25"/> <br> <br>  
+<label> Passing year *</label>         
+<input type="text" name="Passing year" size="25"/> <br> <br>  
+<label> City *</label>         
+<input type="text" name="City" size="25"/> <br> <br>  
+<label> Pin code *</label>         
+<input type="text" name="Pin code" size="25"/> <br> <br>  
+<label> JEE Score *</label>         
+<input type="text" name="JEE Score" size="25"/> <br> <br>  
+
+
+<label>
+XII result Declared?*
+</label><br>       
+
+<input type="radio" name="yes"/> yes(if yes,then mention % in all subjects<br>  
+<input type="radio" name="No"/>No(if No,then mention Pre Board % in all <br>  
+<br>  
+<label>Aggregrate percentage(Engg: PCM/PCB + English)/(Non Engg: All subjects) * </label>
+<input type="text" name="Aggregate percentage(Engg: PCM/PCB + English)/(Non Engg: All subjects)" size="15"/> <br> <br>  
+
+  
+<label> 
+Area of Interest:
+
+</label><br>
+<select>  
+<option value="—Select Area of interest—">Select Area of interest</option>  
+<option value="UG Course">UG Course</option>  
+<option value="PG Course">PG Course</option>  
+<option value="Doctorate">Doctorate</option>  
+<option value="Distance Learning">Distance Learning</option> 
+<br>
+<br>
+
+<label>
+Course:
+</label><br>
+<select>  
+<option value="Course">Course</option> 
+</select>  
+<br>
+<br>  
+
+<label>
+PGCourse:
+</label><br>
+<select>  
+<option value="PG Course">PG Course</option> 
+<option value="MBA">MBA</option> 
+<option value="MCA">MCA</option>  
+<option value="M.Tech">M.Tech</option> 
+
+</select>  
+<br>
+<br>  
+
+<label>
+UG Course :  
+</label><br>  
+<select>  
+<option value="UG Course">UG Course</option>  
+<option value="BCA">BCA</option>  
+<option value="BBA">BBA</option>  
+<option value="B.Tech">B.Tech</option>  
+<option value="Psycho">Psycho</option>  
+<option value="Bio-Tech">Bio-Tech</option>  <option value="B.Sc">B.Sc</option>  
+<option value="BA">BA</option> 
+<option value="B.com">B.com</option>  
+<option value="B.com hons">B.com hons</option>  
+<option value="B.Tech hons">B.Tech hons</option>  
+<option value="BHM">BHM</option> 
+<option value="BMLT">BMLT</option>  
+<option value="BPT">BPT</option> 
+</select>
+<br>
+<br>
+
+
+<label>   
+Gender :  
+</label><br>  
+<input type="radio" name="male"/> Male <br>  
+<input type="radio" name="female"/> Female <br>  
+<input type="radio" name="other"/> Other  
+<br>  
+<br>  
+
+<label>
+Category :  
+</label><br>  
+<input type="radio" name="General"/> General <br>  
+<input type="radio" name="SC"/> SC <br>  
+<input type="radio" name="ST"/> ST  
+<br> 
+<input type="radio" name="OBC"/> OBC
+<br>
+<br>
+
+<label>   
+Defence Candidate :  
+</label><br>  
+<input type="radio" name="yes"/> yes <br>  
+<input type="radio" name="No"/> No<br>  
+<br>  
+
+<label>
+Country :  
+</label></br> 
+<select>  
+<option value="India">India</option> 
+<option value="Other">Other</option> 
+</select>  
+  
+<br>  
+<br>  
+
+<label> State </label>         
+<input type="text" name="State" size="20"/> <br> <br>  
+<label> City</label>     
+<input type="text" name="City" size="20"/> <br> <br>  
+<label> Pin Code </label>         
+<input type="text" name="Pin Code" size="15"/> <br> <br>  
+
+<label>   
+Do you suffer from any chronio aliment or disability:  
+</label><br>  
+<input type="radio" name="yes"/> yes <br>  
+<input type="radio" name="No"/> No<br>  
+<br>  
+
+<label>   
+Association of any Family member  with Graphic Era :  
+</label><br>  
+<input type="radio" name="Employee"/>Employee<br>  
+<input type="radio" name="Student"/> Student<br>  
+<input type="radio" name="Alumni"/>Alumni<br>  
+<input type="radio" name="None"/> None<br>
+
+<br>  
+
+
+  
+<label>   
+Phone no:  
+</label>  
+<input type="text" name="country code"  value="+91" size="1"/>   
+<input type="text" name="phone" size="10"/> <br> <br>  
+parents mobile no:
+</label>  
+<input type="text" name="country code"  value="+91" size="1"/>   
+<input type="text" name="phone" size="10"/> <br> 
+<label>
+Moblie number of either Mother or father Mandatory
+</label>
+<br>
+<br>
+
+
+Correspondence Address:
+<br>  
+<textarea cols="80" rows="5" value="address">  
+</textarea>  
+<br> <br>  
+
+Permanent Address:
+<br>  
+<textarea cols="80" rows="5" value="address">  
+</textarea>  
+<br> <br>  
+Email:  
+<input type="email" id="email" name="email"/> <br>    
+<br> <br>  
+Password:  
+<input type="Password" id="pass" name="pass"> <br>   
+<br> <br>  
+Re-type password:  
+<input type="Password" id="repass" name="repass"> <br> <br>  
+<input type="button" value="Submit"/>  
+</form>  
+</body>  
+</html>  
