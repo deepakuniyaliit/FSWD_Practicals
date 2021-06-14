@@ -1,0 +1,20 @@
+[
+{"type":"header","version":"5.1.0","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"info"},
+{"type":"table","name":"info","database":"info","data":
+[
+{"S.NO":"1","username":"Anshul","email":"0x31323340676d61696c2e636f6d","contact":"1234567890","gender":"male","city":"mumbai","date":"2021-03-26 09:26:48"},
+{"S.NO":"2","username":"aaa","email":"0x7177657240676d61696c2e636f6d","contact":"1111111111","gender":"male","city":"mumbai","date":"2021-03-26 10:21:19"},
+{"S.NO":"3","username":"aaa","email":"0x7177657240676d61696c2e636f6d","contact":"1111111111","gender":"male","city":"mumbai","date":"2021-03-26 10:22:10"},
+{"S.NO":"4","username":"bbbbbb","email":"0x7177657240676d61696c2e636f6d","contact":"2147483647","gender":"male","city":"nanital","date":"2021-03-26 10:22:31"},
+{"S.NO":"5","username":"ccccc","email":"0x3232323240676d61696c2e636f6d","contact":"2147483647","gender":"male","city":"hydrabad","date":"2021-03-26 10:23:06"},
+{"S.NO":"6","username":"dddddd","email":"0x61626340676d61696c2e636f6d","contact":"2147483647","gender":"female","city":"delhi","date":"2021-03-26 10:23:49"},
+{"S.NO":"7","username":"nnnn","email":"0x62646240676d61696c2e636f6d","contact":"2147483647","gender":"female","city":"banglore","date":"2021-03-26 10:24:14"},
+{"S.NO":"8","username":"grkgr","email":"0x31323340676d61696c2e636f6d","contact":"2147483647","gender":"male","city":"mussorie","date":"2021-03-26 10:24:50"},
+{"S.NO":"9","username":"don","email":"0x646f6e40676d61696c2e636f6d","contact":"2147483647","gender":"male","city":"banglore","date":"2021-03-26 10:26:00"},
+{"S.NO":"10","username":"","email":"0x","contact":"0","gender":"","city":"mumbai","date":"2021-03-26 10:26:01"},
+{"S.NO":"11","username":"","email":"0x","contact":"0","gender":"","city":"mumbai","date":"2021-03-26 10:26:13"},
+{"S.NO":"12","username":"gggg","email":"0x676740676d61696c2e636f6d","contact":"1234567890","gender":"","city":"delhi","date":"2021-03-26 10:26:50"}
+]
+}
+]

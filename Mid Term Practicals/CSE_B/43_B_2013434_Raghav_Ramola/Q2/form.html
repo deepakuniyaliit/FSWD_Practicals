@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <title>
+        Login
+    </title>
+    <script>
+        function validateForm() {
+            var x = document.forms["FORM"]["name"].value;
+            if (x == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+            var y = document.forms["FORM"]["contact"].value;
+            if (y.length != 10) {
+                alert("length must be 10");
+                return false;
+            }
+            var le = document.getElementsByTagName("input");
+            var c = 0;
+            for (var i = 0; i < le.length; ++i) {
+                if (le[i].type == "checkbox" && le[i].checked == true) {
+                    c++;
+                }
+            }
+            if (c < 3 || c > 5) { alert("At least 3 interests and at max 5 interests"); return false; }
+            return true;
+
+        }
+    </script>
+</head>
+
+<body>
+    <br>
+    <br>
+    <form method="GET">
+
+        <label> Username </label>
+        <input type="name" name="Username" size="30" required /> <br> <br>
+
+        Email:
+        <input type="email" id="email" name="email" /> <br>
+        <br> <br>
+
+        <label>
+            Phone :
+        </label>
+        <input inputmode="numeric" name="country code" value="+91" size="2" />
+        <input inputmode="numeric" name="phone" required /> <br> <br>
+
+        <br>
+        <br>
+        <label>
+            Gender :
+        </label><br>
+        <input type="radio" name="male" /> Male <br>
+        <input type="radio" name="female" /> Female <br>
+        <input type="radio" name="other" /> Other
+        <br>
+        <br>
+
+        <label>
+            City :
+        </label>
+        <select>
+            <option value="City">City</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Jaipur">Jaipur</option>
+            <option value="Mussoorie">Mussoorie</option>
+            <option value="Nainital">Nainital</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Pune">Pune</option>
+            <option value="Banglore">Banglore</option>
+            <option value="Hyderabad">Hyderabad</option>
+            <option value="Lucknow">Lucknow</option>
+        </select> <br><br>
+
+        <button>submit</button>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+table,td{
+    border: 1px solid pink;
+    border-collapse: collapse;
+    padding: 5px;
+    text-align: center;
+}
+
+body{
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+table{
+    margin-top: 10vh;
+}
