@@ -13,7 +13,7 @@ $publication_year = $_REQUEST['publicationYear'];
 $no_pages =$_REQUEST['noOfPages'];
 $book_type = $_REQUEST['bookType'];
 
-$insert_query = "INSERT into Bookstore(book_name, author_name, isbn_no, publisher_name, publication_year, no_pages, book_type) values('$book_name', '$author_name' ,'$isbn_no' , '$publisher_name' ,'$publication_year' , '$no_pages' , '$book_type' )";
+$insert_query = "INSERT into bookstore(book_name, author_name, isbn_no, publisher_name, publication_year, no_pages, book_type) values('$book_name', '$author_name' ,'$isbn_no' , '$publisher_name' ,'$publication_year' , '$no_pages' , '$book_type' )";
 
 $insert=mysqli_query($con,$insert_query);
 
