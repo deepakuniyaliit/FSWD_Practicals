@@ -39,7 +39,7 @@ else{
 </head>
 <body>
     <div>
-        <form method="POST" action="form.html">
+        <form method="POST" action="form.php">
             <h1>   Fill the form with correct details...   </h1>
             Book Name <input type="text" name="bookname" placeholder="Enter Book Name" required><br><br>
             Author Name <input type="text" name="authorname" placeholder="Enter Author Name" required><br><br>
