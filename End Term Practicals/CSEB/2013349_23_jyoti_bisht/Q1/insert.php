@@ -8,9 +8,10 @@ if(isset($_POST['submit']))
      $publisherName = $_POST['publisherName'];
      $booktype = $_POST['booktype'];
      $pyear = $_POST['pyear'];
+     $nop = $_POST['noofPages'];
 
      $sql = "INSERT INTO users (bookName,authorName,isbnNumber,publisherName)
-     VALUES ('$bookName','$authorName','$isbnNumber', '$publisherName','$booktype', '$pyear')";
+     VALUES ('$bookName','$authorName','$isbnNumber', '$publisherName','$booktype', '$pyear','$nop')";
      if (mysqli_query($conn, $sql)) {
         echo "New record has been added successfully !";
      } else {
