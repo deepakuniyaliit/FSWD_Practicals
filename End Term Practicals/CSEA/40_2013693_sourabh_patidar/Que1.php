@@ -1,10 +1,31 @@
+<?php
+include('config.php');
+?>
 
+<?php
+if(isset($_POST['submit'])){
+    $Bookname = $_POST['Bookname'];
+    $Authorname = $_POST['Authorname'];
+    $isbn = $_POST['isbn'];
+    $Publishername = $_POST['Publishername'];
+    $Noofpages = $_POST['Noofpages'];
+    $Booktype = $_POST['Booktype'];
+    $Publicationyear = $_POST['Publicationyear'];
+
+
+    $sql = "INSERT INTO `Bookstore` (`Bookname`, `Authorname`, `isbn`, `Publishername`,`Noofpages`, `Booktype`, `Publicationyear`) VALUES ('$Bookname', '$Authorname', '$isbn', '$Publishername','$Noofpages', '$Booktype', '$Publicationyear')";
+    mysqli_query($conn, $sql);
+}
+else{
+    echo "Please click submit button to submit the data..";
+}
+?>
 <html>
     <head>
         <title>HTML Forms</title>
     </head>
 <body>
-<form method="POST" action="add.php">
+<form method="POST" action="Que1.php">
     Bookname <input type="text" name="Bookname" placeholder="Type Bookname" required><br>
     Authorname <input type="text" name="Authorname" placeholder="Type Authorname" required><br>
     isbn <input type="Number" name="isbn" placeholder="Type isbn" required><br>
