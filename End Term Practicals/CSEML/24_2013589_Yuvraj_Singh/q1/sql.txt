@@ -1,0 +1,20 @@
+commands used to create the databse
+
+
+Table structure for table `bookstore`
+
+CREATE TABLE `bookstore` (
+  `id` int(11) NOT NULL Primarykey,
+  `publication_year` varchar(100) NOT NULL,
+  `book_type` varchar(100) NOT NULL,
+  `bookName` varchar(100) NOT NULL,
+  `authorName` varchar(100) NOT NULL,
+  `isbnNumber` varchar(100) NOT NULL,
+  `publisherName` varchar(100) NOT NULL,
+  `noOfPages` varchar(100) NOT NULL
+);
+
+checking
+
+INSERT INTO `bookstore` (`id`, `publication_year`, `book_type`, `bookName`, `authorName`, `isbnNumber`, `publisherName`, `noOfPages`) VALUES
+(1, '2010', 'Action', 'as', 'asd', 'das', 'sad', '200');
