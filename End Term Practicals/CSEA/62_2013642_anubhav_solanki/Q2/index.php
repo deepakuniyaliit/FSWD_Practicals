@@ -10,11 +10,6 @@
     <title>User Details</title>
 </head>
 <body>
-<?php
-$sql="SELECT * FROM users";
-$result=mysqli_query($conn, $sql);
-if($result!==false && $result->num_rows > 0){
-?>
 <table border="1px">
     <thead>
         <tr>
@@ -30,6 +25,9 @@ if($result!==false && $result->num_rows > 0){
     </thead>
     <tbody>
         <?php
+        $sql="SELECT * FROM users";
+        $result=mysqli_query($conn, $sql);
+        if($result!==false && $result->num_rows > 0){
         while($row = $result->fetch_array()){?>
         <tr>
             <td><?php echo $row[0]?></td>
