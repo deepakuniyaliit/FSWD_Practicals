@@ -6,7 +6,7 @@ if(!$conn)
     die("Connection   Failed..!!");
 }
 
-$s = "CREATE TABLE IF NOT EXISTS record {BookName varchar(20),AuthName varchar(20),isbnNo int,PubName varchar(20),PubYear int,BookType varchar(20)}";
+$s = "CREATE TABLE IF NOT EXISTS record (id int NOT NULL AUTO_INCREMENT,BookName varchar(20),AuthName varchar(20),isbnNo int,PubName varchar(20),PubYear int,BookType varchar(20))";
 if(!mysqli_query($conn,$s))
 {
   die("SQL Error");
