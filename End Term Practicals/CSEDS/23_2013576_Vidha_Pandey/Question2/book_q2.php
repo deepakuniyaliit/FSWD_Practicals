@@ -1,30 +1,65 @@
-5
-  $db = mysql_connect("localhost", "root", "");
-  $er = mysql_select_db("ram");
-  $query = "insert into names values('$name','$add1','$add2','$mail')";
-  $result = mysql_query($query);
-  print "<p> Person's Information Inserted </p>";
-  $result = mysql_query("SELECT * FROM names");
+<?php
+$servername='localhost';
+$username='root';
+$password='';
+$dbname = "my_db";
+$conn=mysqli_connect($servername,$username,$password,"$dbname");
+  if(!$conn){
+      die('Could not Connect MySql Server:' .mysql_error());
+    }
+
+$result = mysqli_query($conn,"SELECT * FROM BooksRecord");
 ?>
 
-<table border="2">
-   <tr>
-      <th>Name</th>
-      <th>Address Line 1</th>
-      <th>Address Line 2 </th>
-      <th>E-mail Id </th>
-    </tr>
-    <? 
-    while ($array = mysql_fetch_row($result));
-    {
-        print "<tr> <td>";
-        echo $array[0]; 
-        print "</td> <td>";
-        echo $array[1]; 
-        print "</td> <td>";
-        echo $array[2]; 
-        print "</td> <td>";
-        echo $array[3]; 
-        print "</td> </tr>";
-    }
+<!DOCTYPE html>
+<html>
+ <head>
+ <title> Retrive data</title>
+ </head>
+<body>
+<?php
+if (mysqli_num_rows($result) > 0) {
 ?>
+  <table>
+  
+  <th>
+    <td>Book ID</td>
+    <td>Book Name</td>
+    <td>Author</td>
+    <td>ISBN</td>
+    <td>Publisher</td>
+    <td>Publication Year</td>
+    <td>Pages</td>
+    <td>Book Type</td>
+    
+  </th>
+<?php
+
+$i=0;
+while($row = mysqli_fetch_array($result)) {
+?>
+<tr>
+  
+    <td><?php echo "B10".i; ?></td>
+    <td><?php echo $row["BookName"]; ?></td>
+    <td><?php echo $row["AuthorName"]; ?></td>
+    <td><?php echo $row["ISBN"]; ?></td>
+    <td><?php echo $row["PublisherName"]; ?></td>
+    <td><?php echo $row["Year"]; ?></td>
+    <td><?php echo $row["NumPages"]; ?></td>
+    <td><?php echo $row["Booktype"]; ?></td>
+    
+</tr>
+<?php
+$i++;
+}
+?>
+</table>
+ <?php
+}
+else{
+    echo "No result found";
+}
+?>
+ </body>
+</html>
