@@ -9,20 +9,13 @@
 <body>
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $bookName = test_input($_POST["book"]);
-        $authorName = test_input($_POST["author"]);
-        $isbnNo = test_input($_POST["isbn"]);
-        $publisherName = test_input($_POST["pn"]);
-        $publicationYear = test_input($_POST["py"]);
-        $noOfPages = test_input($_POST["pages"]);
-        $bookType = test_input($_POST["btype"]);
-    }
-    function test_input($data)
-    {
-        $data = trim($data);
-        $data = stripslashes($data);
-        $data = htmlspecialchars($data);
-        return $data;
+        $bookName = $_POST["book"];
+        $authorName = $_POST["author"];
+        $isbnNo = $_POST["isbn"];
+        $publisherName = $_POST["pn"];
+        $publicationYear = $_POST["py"];
+        $noOfPages = $_POST["pages"];
+        $bookType = $_POST["btype"];
     }
 
     $user = 'root';

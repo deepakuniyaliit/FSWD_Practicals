@@ -9,7 +9,7 @@ if (mysqli_connect_errno())
 echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
-$res = mysqli_query($con,"SELECT * FROM red");
+$res = mysqli_query($con,"SELECT * FROM rec");
 
 echo "<table border='2'>
 <tr>
@@ -22,16 +22,16 @@ echo "<table border='2'>
 <th>book type</th>
 </tr>";
 
-while($row = mysqli_fetch_array($res))
+while($r = mysqli_fetch_array($res))
 {
-echo "<tr>";
-echo "<td>" . $row['bookname'] . "</td>";
-echo "<td>" . $row['authorname'] . "</td>";
-echo "<td>" . $row['isbnno'] . "</td>";
-echo "<td>" . $row['noofpages'] . "</td>";
-echo "<td>" . $row['publishername'] . "</td>";
-echo "<td>" . $row['publicationyear'] . "</td>";
-echo "<td>" . $row['booktype'] . "</td>";
+echo "<tr width=5vw>";
+echo "<td>" . $r['bookname'] . "</td>";
+echo "<td>" . $r['authorname'] . "</td>";
+echo "<td>" . $r['isbnno'] . "</td>";
+echo "<td>" . $r['noofpages'] . "</td>";
+echo "<td>" . $r['publishername'] . "</td>";
+echo "<td>" . $r['publicationyear'] . "</td>";
+echo "<td>" . $r['booktype'] . "</td>";
 echo "</tr>";
 }
 echo "</table>";
