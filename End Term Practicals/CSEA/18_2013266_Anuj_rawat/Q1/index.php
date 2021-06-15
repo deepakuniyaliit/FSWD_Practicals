@@ -20,6 +20,7 @@ if (isset($_POST['submit'])) {
     if (!$result) {
         die('Query Failed');
     }
+    header("location: index.php");
 }
 
 ?>
