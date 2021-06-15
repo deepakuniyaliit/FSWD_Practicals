@@ -98,4 +98,10 @@ if (
             <input type = "password" class = "form-control"
                name = "password" placeholder = "password" required>
             <button class = "btn btn-lg btn-primary btn-block" type = "submit" 
-... (8 lines left)
+               name = "login">Login</button>
+         </form>
+         
+      </div>
+</body>
+</html>
+
