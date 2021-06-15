@@ -1,0 +1,27 @@
+body{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+/* td{
+    padding: 10px;
+} */
+
+.container{
+    display: flex;
+    padding: 10px;
+}
+input,.enter{
+    padding: 5px;
+}
+.enter4{
+    /* padding: 10px; */
+    margin-top: 10px;
+}
+
+.btn{
+    background-color: antiquewhite;
+    /* padding: 5px; */
+}
