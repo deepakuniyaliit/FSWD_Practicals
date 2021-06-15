@@ -10,8 +10,7 @@
 		$conn = mysqli_connect("localhost", "dhruv", "abcd1234", "BookStore");
 		
 		if($conn === false){
-			die("ERROR: Could not connect. "
-				. mysqli_connect_error());
+			die("ERROR");
 		}
 		
         $sqla = "CREATE DATABASE BookStore";
