@@ -1,5 +1,5 @@
 <?php
-include_once('config.php');
+include_once('connection.php');
 ?>
 <?php
 if(isset($_POST['submit'])){
@@ -24,7 +24,7 @@ else{
         <title>Form Data on Table</title>
     </head>
     <body>
-    <form method="Post" action="add.php">
+    <form method="Post" action="ques1.php">
 			<table>
 				<tr>
 					<td>Book Name: </td>
