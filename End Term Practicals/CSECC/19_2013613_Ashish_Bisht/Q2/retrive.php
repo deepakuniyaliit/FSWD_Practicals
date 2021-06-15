@@ -32,7 +32,7 @@ if($conn)
         $i=0;
         while($row=mysqli_fetch_assoc($result))
         {
-            echo "let n =document.createElement('td');td.innerHTML='row[$i]';document.getElementById('value').innerHTML+=n;"
+            echo "let n =document.createElement('td');td.innerHTML='$row[$i]';document.getElementById('value').innerHTML+=n;"
             i++;
         }
     }
