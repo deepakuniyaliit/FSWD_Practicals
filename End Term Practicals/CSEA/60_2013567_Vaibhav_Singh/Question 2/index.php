@@ -70,7 +70,7 @@ $result = mysqli_query($db, $output);
                 <tr>
                     <td><?php echo $row['id']?></td>
                     <td><?php echo $row['bookName']?></td>
-                    <td><?php echo $row['authorNumber']?></td>
+                    <td><?php echo $row['authorName']?></td>
                     <td><?php echo $row['isbnNumber']?></td>
                     <td><?php echo $row['publisherName']?></td>
                     <td><?php echo $row['pyear']?></td>
