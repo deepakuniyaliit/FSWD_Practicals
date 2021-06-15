@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Book Form by Prakhar Naithani</title>
+</head>
+<body>
+<form method="POST" action="db.php">
+	<label>bookName:</label><input type="text" id="bn" name="bn"><br>
+	<label>authorName:</label><input type="text" id="an" name="an"><br>
+	<label>isbnNumber:</label><input type="text" id="in" name="in"><br>
+	<label>publisherName:</label><input type="text" id="pn" name="pn"><br>
+	<label>publicationYear:</label><select id="py">
+		<option value="2010">2010</option>
+		<option value="2011">2011</option>
+		<option value="2012">2012</option>
+		<option value="2013">2013</option>
+		<option value="2014">2014</option>
+		<option value="2015">2015</option>
+		<option value="2016">2016</option>
+		<option value="2017">2017</option>
+		<option value="2018">2018</option>
+		<option value="2019">2019</option>
+		<option value="2020">2020</option>
+		<option value="2021">2021</option>
+	</select><br>
+	<label>noOfPages:</label><input type="range" id="nop" name="nop" min="200" max="400"><br>
+	<label>bookType:</label><input type="radio" id="bt" name="bt" value="Action">Action<input type="radio" id="bt" name="bt" value="Adventure">Adventure<input type="radio" id="bt" name="bt" value="Classics">Classics<input type="radio" id="bt" name="bt" value="ComicBook">Comic Book<input type="radio" id="bt" name="bt" value="GraphicNovel">Graphic Novel<input type="radio" id="bt" name="bt" value="Detective">Detective<input type="radio" id="bt" name="bt" value="Mystery">Mystery<input type="radio" id="bt" name="bt" value="HistoricalFiction">Historical Fiction<input type="radio" id="bt" name="bt" value="Horror">Horror<input type="radio" id="bt" name="bt" value="LiteraryFiction">LiteraryFiction<br>
+	<input type="submit" name="submit" value="submit"><br>	
+</form>
+</body>
+</html>
