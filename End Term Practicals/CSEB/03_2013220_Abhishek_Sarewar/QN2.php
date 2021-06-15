@@ -59,7 +59,7 @@ $booktype = '';
 	if(isset($_POST['submit'])){
 		
 	
-		 $sql1 = "INSERT INTO `users` (`username`, `email`, `gender`, `city`) VALUES ('$username', '$email', '$gender', '$city')";
+		 $sql1 = "INSERT INTO `book`(`id`, `bookname`, `author`, `isbn`, `publisher`, `pages`) VALUES (`id`, `bookname`, `author`, `isbn`, `publisher`, `pages`)";
 		//  $sql2 = "INSERT INTO `student-details` (`username`, `branch`, `year`) VALUES ('$username', '$branch', '$year')";
 		mysqli_query($conn, $sql1);
         // mysqli_query($conn, $sql2);
