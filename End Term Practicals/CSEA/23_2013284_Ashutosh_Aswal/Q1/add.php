@@ -1,5 +1,39 @@
-<html>
+<?php
+include('configuration.php');
+function validate($username, $gender, $email, $contact, $city)
+{
+    if (empty($username) || empty($gender) || empty($email) || empty($contact) || empty($city)) {
+        return false;
+    }
 
+    if (strlen($contact) != 10) {
+        return false;
+    }
+
+    return true;
+}
+
+if (isset($_POST['add'])) {
+    $name = $_POST['name'];
+    $gender = $_POST['gender'];
+    $email = $_POST['email'];
+    $contact = $_POST['contact'];
+    $city = $_POST['city'];
+    if (validate($username, $gender, $email, $contact, $city)) {
+        $query = "INSERT INTO `users` (`id`, `name`, `gender`, `email`, `contact`, `city`) VALUES (NULL, '$name', '$gender', '$email', '$contact', '$city')";
+        if (mysqli_query($db_handle, $query) == false) {
+            echo 'Insertion Failed!';
+        } else {
+            header('Location: index.php');
+            exit();
+        }
+    } else {
+        echo 'Invalid Data!';
+    }
+}
+?>
+
+<html>
 <head>
     <title>ADD DATA</title>
     <link rel='stylesheet' href='CSS/style.css' />
