@@ -57,7 +57,7 @@
         </select>
         <br><br>
         noOfPages:
-        <input type="range" name="200" id="400">
+        <input type="range" name="noOfPages" min="200" max="400">
         <br><br>
         <div id="btype">
         BookType:
