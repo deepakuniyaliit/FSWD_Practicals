@@ -8,10 +8,7 @@
 <body>
 		<?php
 
-		// servername => localhost
-		// username => root
-		// password => empty
-		// database name => staff
+		
 		$conn = mysqli_connect("localhost", "root", "", "MyUsers");
 		
 		// Check connection
@@ -20,7 +17,7 @@
 				. mysqli_connect_error());
 		}
 		
-		// Taking all 5 values from the form data(input)
+		
 		$Book_ID = $_REQUEST['Book_ID'];
 		$Book_Name = $_REQUEST['Book_Name'];
 		$Author= $_REQUEST['Author'];
@@ -31,8 +28,7 @@
         $Book_Type= $_REQUEST['Book_Type'];
         
 		
-		// Performing insert query execution
-		// here our table name is college
+		
 		$sql = "INSERT INTO  crud VALUES ('$Book_ID',
 			'$Book_Name','$Author','$ISBN ','$Publisher',' $Publication_Year','$Pages','$Book_Type')";
 		
@@ -48,7 +44,7 @@
 				. mysqli_error($conn);
 		}
 		
-		// Close connection
+		
 		mysqli_close($conn);
 		?>
 </body>
