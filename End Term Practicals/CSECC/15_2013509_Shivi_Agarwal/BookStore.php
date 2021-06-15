@@ -2,7 +2,8 @@
     $con = mysqli_connect('127.0.0.1','root','');
     if(!$con){
         echo "Connection not established";
-    }    
+    } 
+
     $bookName=test_input($_POST["bookName"]);
     $authorName=test_input($_POST["authorName"]);
     $isbnNumber=test_input($_POST["isbnNumber"]);
@@ -15,6 +16,7 @@
     if(!mysqli_select_db($con,'BookStore'))
         echo "Databse not connected";
     $sql2="CREATE table BookDetails (
+        bookid INT  AUTO_INCREMENT,
         bookName VARCHAR(30),
         authorName VARCHAR(30),
         isbnNumber INT(9),
