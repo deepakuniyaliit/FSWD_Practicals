@@ -1,61 +1,55 @@
 <?php
 include('q2con.php');
 ?>
-
-<!-- Code to fetch data -->
+<!DOCTYPE html>
+<html>
+ <head>
+ <title> Retrive data</title>
+ </head>
+<body>
+<?php
+if (mysqli_num_rows($result) > 0) {
+?>
+  <table>
+  
+  <th>
+    <td>Book ID</td>
+    <td>Book Name</td>
+    <td>Author</td>
+    <td>ISBN</td>
+    <td>Publisher</td>
+    <td>Publication Year</td>
+    <td>Pages</td>
+    <td>Book Type</td>
+    
+  </th>
 <?php
 
-    $sql="SELECT * FROM users";
-    $result=mysqli_query($conn, $sql);
-
-    if($result!==false && $result->num_rows > 0){
-    ?>
-
-    <table border="1px">
-        <thead>
-            <tr>
-                <th>BOOK ID</th>
-                <th>Book Name</th>
-                <th>Author</th>
-                <th>ISBN</th>
-                <th>Publisher</th>
-                <th>Publiction Year</th>
-                <th>Pages</th>
-                <th>Book Type</th>
-
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-            while($row = $result->fetch_array()){?>
-            <tr>
-                <td><?php echo $row[0]?></td>
-                <td><?php echo $row[1]?></td>
-                <td><?php echo $row[2]?></td>
-                <td><?php echo $row[3]?></td>
-                <td><?php echo $row[4]?></td>
-                <td><?php echo $row[5]?></td>
-                <td><?php echo $row[6]?></td>
-                <td><?php echo $row[7]?></td>
-                <td><a href="edit.php?id=<?php echo $row[0]?>">
-                    <input type="button" value="Edit"></a></td>
-                <td><input type="button" value="delete"></td>
-
-            </tr>
-            <?php } ?>
-        </tbody>
-    </table>
-<?php  }
+$i=0;
+while($row = mysqli_fetch_array($result)) {
 ?>
-
-
-<html>
-
-<head>
+<tr>
+  
+    <td><?php echo "B10".i; ?></td>
+    <td><?php echo $row["BookName"]; ?></td>
+    <td><?php echo $row["AuthorName"]; ?></td>
+    <td><?php echo $row["ISBN"]; ?></td>
+    <td><?php echo $row["PublisherName"]; ?></td>
+    <td><?php echo $row["Year"]; ?></td>
+    <td><?php echo $row["NumPages"]; ?></td>
+    <td><?php echo $row["Booktype"]; ?></td>
     
-    <title>User Details</title>
-</head>
-<body>
-    
-</body>
+</tr>
+<?php
+$i++;
+}
+?>
+</table>
+ <?php
+}
+else{
+    echo "No result found";
+}
+?>
+ </body>
 </html>
