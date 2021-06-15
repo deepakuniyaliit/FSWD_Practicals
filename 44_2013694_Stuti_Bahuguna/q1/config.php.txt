@@ -1,14 +1,14 @@
 <?php
-$hostname="localhost";
-$username="root";
-$password="";
-$database="Bookstore";
+$hostname = "127.0.0.1";
+$username = "root";
+$password = "";
+$databasename = "Bookstore";
 
-$conn=mysqli_connect($hostname, $username ,$password ,$database);
+$conn = mysqli_connect($hostname, $username, $password, $databasename);
 if($conn){
-	echo "Connection Successful...";
+    echo "Connection Successful...";
 }
 else{
-	echo "Connection failed..." +mysqli_connect_error();
+    echo "Connection failed..." + mysqli_connect_error();
 }
 ?>
