@@ -14,8 +14,6 @@ if(isset($_POST["submit"])){
     $sql = "INSERT INTO `bookstore` ( `bookname`, `author`, `isbn`, `publisher`, `year`,`pages`,`type`) VALUES ( '$bn', '$an', '$in', '$pn', '$y','$np','$t')";
 	mysqli_query($conn,$sql);
 } 
-	$sql="select * from users";
-	$res=mysqli_query($conn,$sql); 
 ?>
 <html>
 <head>
