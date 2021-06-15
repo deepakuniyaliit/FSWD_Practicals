@@ -3,7 +3,7 @@
     
     </head>
     <body>
-        <form action="BookStore.php" method="POST">
+        <form action="book.php" method="POST">
             Book Name:<input type="text" name="bookName">
             <br/>
             Author Name:<input type="text" name="authorName">
@@ -31,17 +31,16 @@
             No. of Pages: <input type="range" min="200" max="400" name="noOfPages">
             <br>
             Book Type:
-            <br>
-            Action <input type="radio" value="Action" name="bookType"><br>
-            Adventure <input type="radio" value="Adventure" name="bookType"><br>
-            Classics <input type="radio" value="Classics" name="bookType"><br>
-            Comic Book <input type="radio" value="Comic_Book" name="bookType"><br>
-            Graphic Novel <input type="radio" value="Graphic_Novel" name="bookType"><br>
-            Detective <input type="radio" value="Detective" name="bookType"><br>
-            Mystery <input type="radio" value="Mystery" name="bookType"><br>
-            Historical Fiction <input type="radio" value="Historical_Fiction" name="bookType"><br>
-            Horror <input type="radio" value="Horror" name="bookType"><br>
-            Literary Fiction <input type="radio" value="Literary_Fiction" name="bookType"><br>
+            <input type="radio" name="bookType" value="Action">Action <br>
+            <input type="radio" name="bookType" value="Adventure">Adventure <br>
+            <input type="radio" name="bookType" value="Classics">Classics <br>
+            <input type="radio" name="bookType" value="Comic Book">Comic Book <br>
+            <input type="radio" name="bookType" value="Graphic Novel">Graphic Novel <br>
+            <input type="radio" name="bookType" value="Detective">Detective<br> 
+            <input type="radio" name="bookType" value="Mystery">Mystery<br>
+            <input type="radio" name="bookType" value="Historical Fiction">Historical Fiction <br>
+            <input type="radio" name="bookType" value="Horror">Horror <br> 
+            <input type="radio" name="bookType" value="Literary Fiction">Literary Fiction<br>
             <br>
             <input type="submit" name="submit" value="Submit">
         </form>
