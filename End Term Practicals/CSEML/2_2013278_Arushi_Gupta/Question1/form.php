@@ -12,7 +12,7 @@ if(isset($_POST['submit'])){
     $volume = $_POST['noOfPages'];
     $booktype = $_POST['booktype'];
 
-    $sql = "INSERT INTO `bookname` (`bookname`, `authorname`, `isbnNumber`, `publisherName`, `publisherYear`, 'noOFPages' , 'booktype) VALUES ('$bookname', $authorname, ' $isbnNumber', '$publishername', ' $publisheryear'.,'$noOfPages',' $booktype')";
+    $sql = "INSERT INTO `BookName` (`BookName`, `AuthorName`, `ISBNNumber`, `publisherName`, `year`, 'volume' , 'booktype) VALUES ('$BookName', $authorname, ' $isbnNumber', '$publishername', ' $publisheryear'.,'$volume',' $booktype')";
     mysqli_query($conn, $sql);
 }
 else{
