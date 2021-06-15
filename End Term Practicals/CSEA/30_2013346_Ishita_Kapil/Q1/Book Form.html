@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<style>
+	validation{                                         
+    margin-left: 70px; 
+    font-weight: bold ; 
+    float: left; 
+    clear: left; 
+    width: 100px; 
+    text-align: left; 
+    margin-right: 10px; 
+    font-family:sans-serif,bold, Arial, Helvetica; 
+    font-size:14px; 
+    color:red;
+} 
+   
+div {  
+    box-sizing: border-box; 
+    width: 100%; 
+    border: 100px white; 
+    float: left; 
+    align-content: center; 
+    align-items: center; 
+} 
+   
+form {                                         
+    margin: 0 auto; 
+    width: 600px;
+ color:blue;
+ bgcolor=cyan; 
+}
+</style>
+<body>
+ 
+<form>
+<title>BOOK FORM</title>
+<h1 style="text-align: center"> BOOK FORM </h1> 
+<div>   
+      
+<form name="BookForm" action="abc.php" onsubmit="return validation()" method="post">
+  <p> Book Name: <input type="text"  name="bookName" autocomplete ="off"> </p><br> 
+    <span id="username"></span><br>       
+    <p> Author Name: <input type="text"  name="authorName" autocomplete ="off">  </p><br> 
+    <p>ISBN Number: <input type="text" name="isbnNumber" autocomplete ="off">  </p><br> 
+     <p>Publisher Name: <input type="text"  name="publisherName" autocomplete ="off"> </p><br> 
+     <p>Publication Year    
+        <select type="text" value="" name="Year"> 
+            <option>2010</option> 
+            <option>2011</option> 
+            <option>2012</option> 
+            <option>2013</option>
+            <option>2014</option> 
+            <option>2015</option> 
+            <option>2016</option> 
+            <option>2017</option>
+            <option>2018</option> 
+            <option>2019</option> 
+            <option>2020</option> 
+            <option>2021</option>   
+            
+        </select></p><br><br>  
+    <p>No. of Pages: <input type="range" name="noOfPages" min="200" max="400" autocomplete ="off"> </p><br> 
+    <p>Book Type:
+    	<input type="radio" name="bookType" id="action">
+        <label for="action">Action</label>
+        <input type="radio" name="bookType" id="adventure">
+        <label for="adventure">Adventure</label>
+        <input type="radio" name="bookType" id="classics">
+        <label for="classics">Classics</label>
+        <input type="radio" name="bookType" id="comic">
+        <label for="comic">Comic Book</label>
+        <input type="radio" name="bookType" id="graphic">
+        <label for="graphic">Graphic Novel</label>
+        <input type="radio" name="bookType" id="detective">
+        <label for="detective">Detective</label>
+        <input type="radio" name="bookType" id="mystery">
+        <label for="mystery">Mystery</label>
+        <input type="radio" name="bookType" id="historical">
+        <label for="historical">Historical Fiction</label>
+        <input type="radio" name="bookType" id="horror">
+        <label for="horror">Horror</label>
+        <input type="radio" name="bookType" id="literary">
+        <label for="literary">Literary Fiction</label>
+        </p><br><br>
+        <p><input type="submit" value="Submit" name="Submit">      
+        <input type="reset" value="Reset" name="Reset">   
+    </p>          
+</form>
+</div>
+   
+
+ 
+</body>
+</html>

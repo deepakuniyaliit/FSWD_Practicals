@@ -1,0 +1,68 @@
+<?php
+    include'config.php'
+    if(isset($_POST['submit']))
+    {
+        $bookname = $_POST['bookname'];
+        $authorname = $_POST['authorname'];
+        $isbn = $_POST['isbn'];
+        $publisher = $_POST['publisher'];
+        $year = $_POST['year'];
+        $booktype = $_POST['booktype'];
+        $pages = $_POST['noOfpages'];
+
+        $sql="INSERT INTO table1(bookname,authorname,isbnNumber,publisherName,publicationYear,noOfpages,booktype)VALUES('$bookname','$authorname','$isbnNumber','$publisherName','$publicationYear','$noOfpages','$booktype')";
+        mysqli_query($conn,$sql);
+    }
+    else{
+        echo "click the sibmot button to submit the data";
+    }
+?>
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BOOK</title>
+
+    </head>
+    <body>
+        <form meathod="POST" action="form.html">
+            Book Name<input type="text" placeholder="enter book name" name="bname"><br><br>
+            Author Name<input type="text" placeholder="enter Author name" name="aname"><br><br>
+            ISBN number<input type="text" placeholder="enter ISBN number" name="isbn"><br><br>
+            Publisher Name<input type="text" placeholder="enter punlisher name" name="pname"><br><br>
+            <br>Publication year<br>
+            <select name="pyear">
+                <option value="2010">2010</option>
+                <option value="2011">2010</option>
+                <option value="2012">2010</option>
+                <option value="2013">2010</option>
+                <option value="2014">2010</option>
+                <option value="2015">2010</option>
+                <option value="2016">2010</option>
+                <option value="2017">2010</option>
+                <option value="2018">2010</option>
+                <option value="2019">2010</option>
+                <option value="2020">2010</option>
+                <option value="2021">2010</option>
+            </select><br>
+            <br>Book type<br>
+            Action<input type="radio" value="Action" name="btype"><br>
+            Adventure<input type="radio" value="Adventure" name="btype"><br>
+            Classics<input type="radio" value="Classics" name="btype"><br>
+            Comic_book<input type="radio" value="Comic_book" name="btype"><br>
+            Graphic_novel<input type="radio" value="Graphic_novel" name="btype"><br>
+            detective<input type="radio" value="detective" name="btype"><br>
+            mystery<input type="radio" value="mystery" name="btype"><br>
+            Historical fiction<input type="radio" value="Historical fiction" name="btype"><br>
+            Horror<input type="radio" value="Horror" name="btype"><br>
+            Literary fiction<input type="radio" value="Literary fiction" name="btype"><br>
+            <br>Number of Pages<br>
+            <input type="range" name="volume" min="200" max="400"><br><br>
+            <input type="submit" name="submit">
+
+        </form>
+    </body>
+</html>
+
+

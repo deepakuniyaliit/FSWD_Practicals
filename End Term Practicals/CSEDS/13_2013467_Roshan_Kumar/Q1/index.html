@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Record</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+    <style type="text/css">
+        .wrapper{
+            width: 500px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="page-header">
+                        <h2>BookStore Form</h2>
+                    </div>
+                    <p>Please fill this form and submit.</p>
+                    <form action="insert.php" method="post">
+                        <div class="form-group">
+                            <label>Book Name</label>
+                            <input type="text" name="bookName" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Author Name</label>
+                            <input type="text" name="authorName" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>ISBN Number</label>
+                            <input type="text" name="isbnNumber" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Publisher Name</label>
+                            <input type="text" name="publisherName" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Publication Year</label>
+                            <select name="publicationYear" class="form-control">
+                                <option value="2010">2010</option>
+                                <option value="2011">2011</option>
+                                <option value="2012">2012</option>
+                                <option value="2013">2013</option>
+                                <option value="2014">2014</option>
+                                <option value="2015">2015</option>
+                                <option value="2016">2016</option>
+                                <option value="2017">2017</option>
+                                <option value="2018">2018</option>
+                                <option value="2019">2019</option>
+                                <option value="2020">2020</option>
+                                <option value="2021">2021</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Number Of Pages</label>
+                            <input type="number" min="200" max="400" name="noOfPages" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Book Type:</label>
+                            <input type="radio" id="action" name="booktype" value="action">
+                            <label for="action">Action</label><br>
+                            <input type="radio" id="adventure" name="booktype" value="adventure">
+                            <label for="adventure">Adventure</label><br>
+                            <input type="radio" id="classics" name="booktype" value="classics">
+                            <label for="classics">Classics</label><br>
+                            <input type="radio" id="comicbook" name="booktype" value="comicbook">
+                            <label for="comicbook">Comic Book</label><br>
+                            <input type="radio" id="graphicnovel" name="booktype" value="graphicnovel">
+                            <label for="graphicnovel">Graphic Novel</label><br>
+                            <input type="radio" id="detective" name="booktype" value="detective">
+                            <label for="detective">Detective</label><br>
+                            <input type="radio" id="mystery" name="booktype" value="mystery">
+                            <label for="mystery">Mystery</label><br>
+                            <input type="radio" id="hfiction" name="booktype" value="historical fiction">
+                            <label for="historical fiction">Historical Fiction</label><br>
+                            <input type="radio" id="horror" name="booktype" value="horror">
+                            <label for="horror">Horror</label><br>
+                            <input type="radio" id="lfiction" name="booktype" value="literary fiction">
+                            <label for="literary fiction">Literary Fiction</label><br>
+                        </div>
+                        <input type="submit" class="btn btn-primary" name="submit" value="Submit">
+                    </form>
+                </div>
+            </div>        
+        </div>
+    </div>
+</body>
+</html>
