@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Question 1</title>
+</head>
+
+<body>
+    <div class="form1">
+        <form action="submit.php">
+            <table>
+                <tr>
+                    <td><label for="bookName">Enter Book Name: </label></td>
+                    <td><input type="text" name="bookName" id="bookName" /></td>
+                </tr>
+                <tr>
+                    <td><label for="authorName">Enter Author Name: </label></td>
+                    <td><input type="text" name="authorName" id="authorName" /></td>
+                </tr>
+                <tr>
+                    <td><label for="isbnNum">Enter ISBN Number: </label></td>
+                    <td><input type="text" name="isbnNum" id="isbnNum" /></td>
+                    <!-- I'm using type text thinking that it may contain some letters too,
+                    otherwise would have used number -->
+                </tr>
+                <tr>
+                    <td><label for="pubName">Enter Publisher Name: </label></td>
+                    <td><input type="text" name="pubName" id="pubName" /></td>
+                </tr>
+                <tr>
+                    <td><label for="pubYear">Enter Publication Year: </label></td>
+                    <td><input type="number" name="pubYear" id="pubYear" /></td>
+                </tr>
+                <tr>
+                    <td><label for="pages">Enter number of pages: </label></td>
+                    <td><input type="number" name="pages" id="pages" /></td>
+                </tr>
+                <tr>
+                    <td><label for="bookType">Enter book type: </label></td>
+                    <td><input type="text" name="bookType" id="bookType" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2" id="sub">
+                        <button type="submit">Submit</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>
