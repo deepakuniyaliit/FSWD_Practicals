@@ -48,7 +48,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
         </title>
     </head>
     <body>
-        <form method="POST" action="form.php">
+        <form method="POST" action="">
             Book Name <input type="text" placeholder="Enter Book Name" name="bname"><br><br>
             Author Name <input type="text" placeholder="Enter Author Name" name="aname"><br><br>
             ISBN Number <input type="text" placeholder="Enter ISBN Number" name="isbn"><br><br>
