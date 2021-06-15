@@ -35,12 +35,11 @@
         <div>
           <div>
             <?php
-                            include_once 'config.php';
-                            $result= mysqli_query($conn," SELECT * FROM users"
-                            );
-                            ?>
+                include_once 'config.php';
+                $result= mysqli_query($conn," SELECT * FROM user");
+            ?>
             <?php
-                                if (mysqli_num_rows($result)>
+                 if (mysqli_num_rows($result)>
             0) { ?>
             <table>
               <tr>
@@ -101,13 +100,9 @@
             <?php
                                                                             }
            else{
-                  echo"
-                                                                            No
-                                                                            result
-                                                                            found"
-                                                                            ;
-                                                                            }
-                                                                            ?>
+                  echo"empty"; 
+           }
+?>
           </div>
         </div>
       </div>
