@@ -67,7 +67,7 @@ else{
             </tr>
             <tr>
                 <td>Number of Pages</td>
-                <td><input type="Number"  name="noOfPages"></td>
+                <td><input type="range"  name="noOfPages" min="200" max="400"></td>
             </tr>
             <tr>
                 <td>Book Type</td>
