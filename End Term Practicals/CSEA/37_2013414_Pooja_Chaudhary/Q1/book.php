@@ -12,7 +12,7 @@ if (isset($_POST['submitbtn'])) {
     $pbyear = $_POST['publicationYear'];
     $btype = $_POST['booktype'];
 
-    $query = "insert into usertable(bookName,authorName,isbnNumber,publisherName,publicationYear,noOfPages,bookType) values ('$bname','$aname','$isbn','$pbname','$numpages','$pbyear','$btype')";
+    $query = "insert into books(bookName,authorName,isbnNumber,publisherName,publicationYear,noOfPages,bookType) values ('$bname','$aname','$isbn','$pbname','$pbyear','$numpages','$btype')";
     mysqli_query($con, $query);
 }
 
@@ -32,18 +32,18 @@ if (isset($_POST['submitbtn'])) {
             publisher name: <input type="text" name="publisherName" placeholder="Enter publisher name" required><br><br>
             Publication year: 
             <select name="publicationYear" id="pbyear">
-                <option value="">2010</option>
-                <option value="">2011</option>
-                <option value="">2012</option>
-                <option value="">2013</option>
-                <option value="">2014</option>
-                <option value="">2015</option>
-                <option value="">2016</option>
-                <option value="">2017</option>
-                <option value="">2018</option>
-                <option value="">2019</option>
-                <option value="">2020</option>
-                <option value="">2021</option>
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
             </select>
             <br><br>
             no of pages: <input type="text" name="noOfPages" placeholder="Enter no of pages" required><br><br>
