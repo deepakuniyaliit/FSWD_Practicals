@@ -34,27 +34,27 @@
   <label for="vol">No of pages (between 200 and 400):</label><br>
   <input type="range" id="Noofpages" name="Noofpages" min="200" max="400"><br>
   <p>Book type :</p>
-  <input type="radio" id="Action" name="gender" value="Action">
+  <input type="radio" id="Action" name="bookType" value="Action">
   <label for="Action">Action</label><br>
-  <input type="radio" id="Adventure" name="gender" value="Adventure">
+  <input type="radio" id="Adventure" name="bookType" value="Adventure">
   <label for="Adventure">Adventure</label><br>
-  <input type="radio" id="Classics" name="gender" value="Classics">
+  <input type="radio" id="Classics" name="bookType" value="Classics">
   <label for="Classics">Classics</label><br>
-  <input type="radio" id="Comicbook" name="gender" value="Comicbook">
+  <input type="radio" id="Comicbook" name="bookType" value="Comicbook">
   <label for="Comicbook">Comic book</label><br>
-  <input type="radio" id="GraphicNovel" name="gender" value="GraphicNovel">
+  <input type="radio" id="GraphicNovel" name="bookType" value="GraphicNovel">
   <label for="GraphicNovel">Graphic Novel</label><br>
-  <input type="radio" id="Detective" name="gender" value="Detective">
+  <input type="radio" id="Detective" name="bookType" value="Detective">
   <label for="Detective">Detective</label><br>
-  <input type="radio" id="Mystery" name="gender" value="Mystery">
+  <input type="radio" id="Mystery" name="bookType" value="Mystery">
   <label for="Mystery">Mystery</label><br>
-  <input type="radio" id=" HistoricalFiction" name="gender" value=" HistoricalFiction">
+  <input type="radio" id=" HistoricalFiction" name="bookType" value=" HistoricalFiction">
   <label for=" HistoricalFiction"> Historical Fiction</label><br>
-  <input type="radio" id="Horror" name="gender" value="Horror">
+  <input type="radio" id="Horror" name="bookType" value="Horror">
   <label for="Horror"> Horror</label><br>
-  <input type="radio" id=" LiteraryFiction" name="gender" value=" LiteraryFiction">
+  <input type="radio" id=" LiteraryFiction" name="bookType" value=" LiteraryFiction">
   <label for=" LiteraryFiction">  Literary Fiction</label><br>
-  <input type="submit" value="Submit">
+  <input type="submit" value="Submit">bookType
 </form>
 </body>
 </html>
