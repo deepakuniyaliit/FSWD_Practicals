@@ -7,23 +7,23 @@
             shrink-to-fit=no" />
     <title>Php site</title>
     <style type="text/css">
-        table {
-            font-family: arial, sans-serif;
-            border-collapse: collapse;
-            width: 100%;
-        }
-        
-        td,
-        th {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
-        }
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td,
+    th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
     </style>
     <script type="text/javascript">
-        $(document).ready(function() {
-            $('[data-toggle="tooltip"]').tooltip();
-        });
+    $(document).ready(function() {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
     </script>
 </head>
 
@@ -38,76 +38,76 @@
                             $result= mysqli_query($conn," SELECT * FROM users"
                             );
                             ?>
-                        <?php
+                    <?php
                                 if (mysqli_num_rows($result)>
                                 0) { ?>
-                            <table>
-                                <tr>
-                                    <td>Book ID</td>
-                                    <td>Book Name</td>
-                                    <td>Author</td>
-                                    <td>ISBN</td>
-                                    <td>Publisher</td>
-                                    <td>Publication Year</td>
-                                    <td>Pages</td>
-                                    <td>Book Type</td>
-                                </tr>
-                                <?php
+                    <table>
+                        <tr>
+                            <td>Book ID</td>
+                            <td>Book Name</td>
+                            <td>Author</td>
+                            <td>ISBN</td>
+                            <td>Publisher</td>
+                            <td>Publication Year</td>
+                            <td>Pages</td>
+                            <td>Book Type</td>
+                        </tr>
+                        <?php
                                         $i=0;
                                         while($row= mysqli_fetch_array($result))
                                         {
                                         ?>
-                                    <tr>
-                                        <td>
-                                            <?php echo $row[" book_id" ]; ?>
-                                        </td>
-                                        <td>
-                                            <?php echo $row[" book_name"
+                        <tr>
+                            <td>
+                                <?php echo $row[" book_id" ]; ?>
+                            </td>
+                            <td>
+                                <?php echo $row[" book_name"
                                                         ]; ?>
-                                        </td>
-                                        <td>
-                                            <?php echo $row["
+                            </td>
+                            <td>
+                                <?php echo $row["
                                                             author" ]; ?>
-                                        </td>
-                                        <td>
-                                            <?php echo $row["
+                            </td>
+                            <td>
+                                <?php echo $row["
                                                                 isbn" ]; ?>
-                                        </td>
-                                        <td>
-                                            <?php echo
+                            </td>
+                            <td>
+                                <?php echo
                                                                     $row["
                                                                     publisher"
                                                                     ]; ?>
-                                        </td>
-                                        <td>
-                                            <?php echo
+                            </td>
+                            <td>
+                                <?php echo
                                                                         $row["
                                                                         publication_year"
                                                                         ]; ?>
-                                        </td>
-                                        <td>
-                                            <?php
+                            </td>
+                            <td>
+                                <?php
                                                                             echo
                                                                             $row["
                                                                             pages"
                                                                             ];
                                                                             ?>
-                                        </td>
-                                        <td>
-                                            <?php
+                            </td>
+                            <td>
+                                <?php
                                                                                 echo
                                                                                 $row["
                                                                                 book_type"
                                                                                 ];
                                                                                 ?>
-                                        </td>
-                                    </tr>
-                                    <?php
+                            </td>
+                        </tr>
+                        <?php
                                                                             $i++;
                                                                             }
                                                                             ?>
-                            </table>
-                            <?php
+                    </table>
+                    <?php
                                                                             }
                                                                             else{
                                                                             echo"
