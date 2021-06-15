@@ -1,5 +1,5 @@
 <?php
-include_once 'bookstore.php';
+include_once 'connect.php';
 if(isset($_POST['submit']))
 {    
      $bookName = $_POST['bookName'];
