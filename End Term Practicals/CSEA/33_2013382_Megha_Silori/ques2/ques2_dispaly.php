@@ -5,7 +5,7 @@ include('config.php');
 <!-- Code to fetch data -->
 <?php
 
-    $sql="SELECT * FROM `book`";
+    $sql="SELECT * FROM `books`";
     $result=mysqli_query($conn, $sql);
 
     if($result!==false && $result->num_rows > 0){
