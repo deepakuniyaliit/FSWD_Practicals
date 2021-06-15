@@ -59,10 +59,10 @@ $booktype = '';
 	if(isset($_POST['submit'])){
 		
 	
-		 $sql1 = "INSERT INTO `users` (`username`, `email`, `gender`, `city`) VALUES ('$username', '$email', '$gender', '$city')";
-		//  $sql2 = "INSERT INTO `student-details` (`username`, `branch`, `year`) VALUES ('$username', '$branch', '$year')";
+		 $sql1 = "INSERT INTO `book`(`id`, `bookname`, `author`, `isbn`, `publisher`, `pages`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6])";
+	
 		mysqli_query($conn, $sql1);
-        // mysqli_query($conn, $sql2);
+        
 	}
 	else{
 		echo "Please click submit button to submit the data..";
