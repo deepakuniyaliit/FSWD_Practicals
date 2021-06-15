@@ -13,6 +13,7 @@
     if(!mysqli_select_db($con,'BookStore'))
         echo "DB not connected";
     $sql2="CREATE table BookDetails (
+        bookid INT AUTO_INCREMENT,
         bookName VARCHAR(30),
         authorName VARCHAR(30),
         isbn INT(9),
