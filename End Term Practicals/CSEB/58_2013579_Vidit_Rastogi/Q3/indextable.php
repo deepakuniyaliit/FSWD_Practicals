@@ -20,7 +20,7 @@ echo "Connected successfully <br>";
     <table border="1px">
         <thead>
             <tr>
-                <th>BOOK ID</th>
+                
                 <th>Book Name</th>
                 <th>Author</th>
                 <th>ISBN</th>
@@ -42,7 +42,7 @@ echo "Connected successfully <br>";
                 <td><?php echo $row[4]?></td>
                 <td><?php echo $row[5]?></td>
                 <td><?php echo $row[6]?></td>
-                <td><?php echo $row[7]?></td>
+               
 
             </tr>
             <?php } ?>
