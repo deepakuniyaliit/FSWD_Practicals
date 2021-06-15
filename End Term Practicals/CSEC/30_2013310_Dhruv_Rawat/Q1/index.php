@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Insert Page page</title>
+
 </head>
 
 <body>
@@ -14,6 +14,29 @@
 				. mysqli_connect_error());
 		}
 		
+        $sqla = "CREATE DATABASE BookStore";
+        if ($conn->query($sqla) === TRUE) {
+          echo "Database created successfully";
+        } else {
+          echo "Error";
+        }
+
+        $sqlb = "CREATE TABLE store (
+            bookName VARCHAR(30) NOT NULL,
+            authorName VARCHAR(30) NOT NULL,
+            isbnNumber VARCHAR(30) NOT NULL PRIMARY KEY,
+            publisherName VARCHAR(30) NOT NULL,
+            publicationYear VARCHAR(4) NOT NULL,
+            noOfPages VARCHAR(3) NOT NULL,
+            bookType VARCHAR(20) NOT NULL,  
+            )";
+            
+            if ($conn->query($sqlb) === TRUE) {
+              echo "Table store created successfully";
+            } else {
+              echo "Error";
+            }
+
 		$bookName=$_REQUEST['bookName'];
 		$authorName=$_REQUEST['authorName'];
 		$isbnNumber=$_REQUEST['isbnNumber'];
