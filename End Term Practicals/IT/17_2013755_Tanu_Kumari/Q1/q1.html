@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="UTF-8">
+        <title>Q1_Book_Details</title>
+		<style>
+		div
+		{
+				background-color:cyan;
+				margin:0px auto;
+				padding:30px;
+				width:35%;
+				font-size:20px;
+		}
+		input[type="text"],select
+		{
+				border:1px solid #ccc;
+				display: inline block;
+				margin:8px 0;
+				box-sizing:border-box;
+				padding:12px 20px;
+				width:100%;
+				font-size:14px;
+		}
+		input[type="submit"]
+		{
+				background-color:black;
+				margin:8px 0;
+				color:white;
+				padding:14px 20px;
+				width:100%;
+				border:none;
+				border-radius:4px;
+				cursor:pointer;
+				font-size:16px;
+		}
+		input[type="submit"]:hover
+		{
+				background-color:red;
+		}
+		h1
+		{
+				color:blue;
+				text-align:center;
+		}
+		div label
+		{
+				color:blue;
+		}
+		
+	</style>
+    </head>
+	
+    <body>
+	<h1>Book_Info Form</h1>
+    <div bgcolor="cyan">
+        <form name ="bookdataentry" action="book.html" method="post">
+			<label for="BN">Book Name</label>
+			<input type="text" placeholder="Enter Book Name" name="bname"><br><br>
+            <label for="AN">Author Name</label>
+			<input type="text" placeholder="Enter Author Name" name="aname"><br><br>
+            <label for="isbn">ISBN Number </label>
+			<input type="text" placeholder="Enter ISBN Number" name="isbn"><br><br>
+            <label for="PN">Publisher Name </label>
+			<input type="text" placeholder="Enter Publisher Name" name="pname"><br><br>
+            <label for="PY">Publication Year</label><br>
+            <select name="pyear">
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+              </select><br>
+			  
+			<label for="nop">Number Of Pages</label><br>
+            <input type="range" name="volume" min="200" max="400"> <br><br>
+			
+            <label for="BT"> Book Type </label><br><br>
+            Detective &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="radio" value="Detective" name="btype"><br>
+            Mystery &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="radio" value="Mystery" name="btype"><br>
+            Historical Fiction
+			<input type="radio" value="Historical_Fiction" name="btype"><br>
+            Horror &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="radio" value="Horror" name="btype"><br>
+            Literary Fiction &nbsp;&nbsp;
+			<input type="radio" value="Literary_Fiction" name="btype"><br>
+			Action  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="radio" value="Action" name="btype"><br>
+            Adventure&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="radio" value="Adventure" name="btype"><br>
+            Classics &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="radio" value="Classics" name="btype"><br>
+            Comic Book &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="radio" value="Comic_Book" name="btype"><br>
+            Graphic Novel &nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="radio" value="Graphic_Novel" name="btype"><br>
+            <br>
+            <input type="submit" name="SUBMIT">
+		</div>
+        </form>
+    </body>
+</html>
