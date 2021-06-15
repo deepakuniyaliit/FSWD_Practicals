@@ -48,13 +48,13 @@
         publisherName: <input name="publisherName"></input>
         <br><br>
         publisherYear: 
-        <select id="1">
-            <script>
-                for(let i=2010;i<=2021;i++){
-                    document.querySelector("#1").innerHTML+=`<option name="publisherYear" value="${i}">${i}</option>`
-                }
-            </script>      
-        </select>
+        <select id="year">
+        <script>
+            for(let i=2010;i<=2021;i++){
+                document.querySelector("#year").innerHTML+=`<option name="publisherYear" value="${i}">${i}</option>`
+            }
+        </script> 
+        </select> 
         <br><br>
         noOfPages:
         <input type="range" name="noOfPages" min="200" max="400">
