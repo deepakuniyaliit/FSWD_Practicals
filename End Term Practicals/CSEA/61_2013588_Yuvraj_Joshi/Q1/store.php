@@ -13,8 +13,8 @@
 			$noOfPages = $_POST['noOfPages'];
 			$bookType = $_POST['bookType'];
 
-			$sql = "INSERT INTO `BookDetails` (`isbn`, `bookName`, `authorName`, `publisherName`, `publicationYear`, `noOfPages`, `bookType) VALUES 
-			('$isbnNumber', '$bookName', '$authorName', '$publisherName', '$publicationYear', '$noOfPages', '$bookType');";
+			$sql = "INSERT INTO `BookDetails` (`bookId`, `bookName`, `authorName`, `isbn`, `publisherName`, `publicationYear`, `noOfPages`, `bookType`) VALUES 
+			(NULL, '$isbnNumber', '$bookName', '$authorName', '$isbnNumber', '$publisherName', '$publicationYear', '$noOfPages', '$bookType');";
 			mysqli_query($conn, $sql);
 		}
 		else
