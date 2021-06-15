@@ -2,7 +2,7 @@
 include('config.php');
 ?>
 <?php
-
+    //Database name is BookStore and table name is BookDetails
     $sql="SELECT * FROM BookDetails";
     $result=mysqli_query($conn, $sql);
 
