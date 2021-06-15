@@ -2,47 +2,15 @@
 include('config.php');
 ?>
 
-
 <?php
 
-if (isset($_POST['bookName'])) {
-    $bookname = $_POST['bookName'];
-} else {
-    $bookname = '';
-}
-if (isset($_POST['authorName'])) {
-    $authorName = $_POST['authorName'];
-} else {
-    $authorName = '';
-}
-if (isset($_POST['isbnNumber'])) {
-    $ISBN = $_POST['isbnNumber'];
-} else {
-    $ISBN = '';
-}
-if (isset($_POST['publisherName'])) {
-    $Publisher = $_POST['publisherName'];
-} else {
-    $Publisher = '';
-}
-if (isset($_POST['pyear'])) {
-    $Year = $_POST['pyear'];
-} else {
-    $Year = '';
-}
-if (isset($_POST['noOfPages'])) {
-    $Pages = $_POST['noOfPages'];
-} else {
-    $Pages = '';
-}
-if (isset($_POST['btype'])) {
-    $Type = $_POST['btype'];
-} else {
-    $Type = '';
-}
-
-$output = "SELECT `id`,`bookName`, `authorName`, `isbnNumber`, `publisherName`, `publicationYear`, `bookType`, `noOfPages` FROM `books`";
+$output = "SELECT * FROM `books`";
 $result = mysqli_query($db, $output);
+if ($result == false) {
+    echo 'Invalid Select Query';
+} else if ($result->num_rows == 0) {
+    echo 'Database is currently empty';
+}
 ?>
 
 <!DOCTYPE html>
