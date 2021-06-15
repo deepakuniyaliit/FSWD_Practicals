@@ -14,7 +14,6 @@
     <input type="text" name="authorname" size="15"/> <br> <br>  
     <label> isbnNumber: </label>         
     <input type="text" name="isbnNumber" size="15"/> <br> <br>  
-      <input type="text" name="isbnNumber" size="15"/> <br> <br>  
     <label>   
     Publisher Name:  
     </label> 
@@ -22,7 +21,7 @@
     <label>   
         Publisher Year:  
         </label>   
-    <select>  
+    <select name=publisheryear>  
     <option value="2010">2010</option>  
     <option value="2011">2011</option>  
     <option value="2012">2012</option>  
@@ -35,14 +34,15 @@
     <option value="2019">2019</option>   
     <option value="2010">2020</option>  
     <option value="2021">2021</option>  
+    </select>
+
     <br>  
     <br>  
-    <label>   
-    no of Pages:  
-    </label><br>  
-    <input type="number" name="noofpages" min="200" max="400"/> Male <br>  
     
-    <br> 
+<label>   
+    no of Pages:  
+    </label> 
+    <input type="number" name="noofpages" min="200" max="400"/> <br>  
     <label>
         book Type:
     </label> 
@@ -60,7 +60,7 @@
     <br>  
       
    
-    <input type="type" value="Register"/>  
+    <input type="submit" value="Register"/>  
     </form>
 </body>
 </html>
