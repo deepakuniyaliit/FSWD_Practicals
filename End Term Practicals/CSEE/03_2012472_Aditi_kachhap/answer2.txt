@@ -1,0 +1,57 @@
+<?php
+include('config.php');
+?>
+
+<!--code to fetch data-->
+<?php
+
+$sql="SELECT*FROM users";
+$result=mysqli_query($cann,$sql);
+
+if($result==false&&$result->num_rows>0){
+?>
+
+<table border="lpx">
+ <thread>
+ <tr>
+   <th>BOOKID</th>
+   <th>BookName</th>
+   <th>Author</th>
+   <th>ISBN</th>
+   <th>Publisher</th>
+   <th>Publication Year</th>
+    <th>Pages</th>
+   <th>Book Type</th>
+
+ </tr>
+ </thread>
+ <tbody>
+ <?php
+  while($row=$resukt->fetch_array()){?>
+  <tr>
+   <td><?php echo $row[0]?></td>
+   <td><?php echo $row[1]?></td>
+   <td><?php echo $row[2]?></td>
+   <td><?php echo $row[3]?></td>
+   <td><?php echo $row[4]?></td>
+   <td><?php echo $row[5]?></td>
+   <td><?php echo $row[6]?></td>
+   <td><?php echo $row[7]?></td>
+
+        </tr>
+         <?php}?>
+        </tbody>
+       </table>
+      <?php }
+      ?>
+
+      <html>
+    
+      <head>
+
+      <title>User Details</title>
+     </head>
+     <body>
+
+      </body>
+      </html>

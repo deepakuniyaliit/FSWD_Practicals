@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="server.php" method="POST">
+        Enter Name of the author:<input type="text"><br>
+        Enter Name of the Book: <input type="text"><br>
+        Enter ISBN Number: <input type="text"><br>
+        Enter Name of the Publisher: <input type="text"><br>
+        Enter Publication Year: <select name="Year" id=""><br>
+            <option value="1995">1995</option>
+            <option value="1996">1996</option>
+            <option value="2005">2005</option>
+            <option value="2006">2006</option>
+            <option value="2008">2008</option>
+            <option value="2009">2009</option>
+            <option value="2010">2010</option>
+            <option value="2011">2011</option>
+            <option value="2012">2012</option>
+            <option value="2015">2015</option>
+            <option value="2019">2019</option>
+            <option value="2021">2021</option>
+        </select>
+        <br>Number of pages: <input type="number" min="200" max="400"><br>
+        <input type="radio" id="action" name="booktype" value="action">
+        <label for="action">Action</label><br>
+        <input type="radio" id="adventure" name="booktype" value="adventure">
+        <label for="adventure">Adventure</label><br>
+        <input type="radio" id="classics" name="booktype" value="classics">
+        <label for="classics">Classics</label><br>
+        <input type="radio" id="comicbook" name="booktype" value="comicbook">
+        <label for="comicbook">Comic</label><br>
+        <input type="radio" id="graphicnovel" name="booktype" value="graphicnovel">
+        <label for="graphicnovel">Novel</label><br>
+        <input type="radio" id="detective" name="booktype" value="detective">
+        <label for="detective">Detective</label><br>
+        <input type="radio" id="mystery" name="booktype" value="mystery">
+        <label for="mystery">Mystery</label><br>
+        <input type="radio" id="hfiction" name="booktype" value="historical fiction">
+        <label for="historical fiction">Historical Fiction</label><br>
+        <input type="radio" id="horror" name="booktype" value="horror">
+        <label for="horror">Horror</label><br>
+        <input type="radio" id="lfiction" name="booktype" value="literary fiction">
+        <label for="literary fiction">Literary Fiction</label><br>
+        <input type="submit">
+    </form>
+</body>
+</html>
