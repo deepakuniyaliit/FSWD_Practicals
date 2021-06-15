@@ -16,13 +16,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
        $volume = $_POST['volume'];
        $sql = "INSERT INTO `users` (`Book_Name`, `Author_Name`, `ISBN_Number`, `Publisher_Name`, `Publication_Year`,`Book_Type`,`Number_Of_Pages`) VALUES ('$bname', '$aname', '$isbn', '$pname', '$pyear','$btype','$volume')";
         mysqli_query($conn, $sql);
-    if($result){
-      $showAlert=true;
-      header('location:details.php');
-    }
-      else{
-        echo "there was an error";
-      }
+        echo "Data Entered Successfully";
     }
 
 ?>
