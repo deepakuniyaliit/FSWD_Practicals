@@ -29,9 +29,11 @@ if($conn)
     $result=mysqli_query($conn,$sql);
     if(mysqli_num_rows($result)>0)
     {
+        $i=0;
         while($row=mysqli_fetch_assoc($result))
         {
-            echo "document.getElementById("value")"
+            echo "let n =document.createElement('td');td.innerHTML='row[$i]';document.getElementById('value').innerHTML+=n;"
+            i++;
         }
     }
 }
