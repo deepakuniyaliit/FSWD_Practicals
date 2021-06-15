@@ -1,11 +1,14 @@
 <?php
-include('BookStore.php');
-?>
 
-<?php
+    $hostname = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "BookStore";
 
-    $sql="SELECT * FROM BookDetails";
-    $result=mysqli_query($con, $sql);
+    $conn = mysqli_connect($hostname, $username, $password, $dbname) or die("Connection failed: " . mysqli_connect_error());
+
+    $sql="SELECT * FROM BookStore";
+    $result=mysqli_query($conn, $sql);
 
     if($result!==false && $result->num_rows > 0){
     ?>
@@ -41,17 +44,18 @@ include('BookStore.php');
                 <td><input type="button" value="delete"></td>
 
             </tr>
-            <?php 
-            } 
-            ?>
+            <?php } ?>
         </tbody>
     </table>
-<?php  
-}
+<?php  }
 ?>
+
+
 <html>
-<head>   
-    <title>User Details</title>
+
+<head>
+    
+    <title>Book Details</title>
 </head>
 <body>
     
