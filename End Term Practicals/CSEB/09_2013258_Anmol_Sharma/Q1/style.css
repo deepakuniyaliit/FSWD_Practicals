@@ -35,3 +35,7 @@ button {
     width: 100%;
     cursor: pointer;
 }
+
+#page {
+    margin-left: 5px;
+}
