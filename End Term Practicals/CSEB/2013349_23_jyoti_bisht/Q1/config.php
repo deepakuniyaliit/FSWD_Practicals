@@ -1,7 +1,7 @@
 <?php
 $hostname="localhost";
-$username="root";
-$password="";
+$username="admin";
+$password="admin";
 $database="bookstore";
 
 $conn=mysqli_connect($hostname, $username ,$password ,$database);
