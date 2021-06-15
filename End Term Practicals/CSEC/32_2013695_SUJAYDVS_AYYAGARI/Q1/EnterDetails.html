@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<body bgcolor = "orange#ffa500">
+<center><h2>End Semester Paper </h2></center>
+<form action = "SubmittingForms.php" method "post">
+
+<table border="2" align="center" cellpadding="5" cellspacing="5">
+<tr>
+<td> Enter BookName :</td>
+<td> <input type="text" name="bookName" size="48"> </td>
+</tr>
+<tr>
+<td> Enter AuthorName :</td>
+<td> <input type="text" name="authorName" size="48"> </td>
+</tr>
+<tr>
+<td> Enter ISBN :</td>
+<td> <input type="text" name="isbnNumber" size="48"> </td>
+</tr>
+<tr>
+<td> Enter PublisherName :</td>
+<td> <input type="text" name="publisherName" size="48"> </td>
+</tr>
+<tr>
+<td> Enter PublicationYear :</td>
+<td> <input type="text" name="publicationYear" size="48">
+        <select name="Year" id="">
+            <option value="2010">2010</option>
+            <option value="2011">2011</option>
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+        </select>
+</tr>
+<tr>
+<td> Enter No. Of Pages :</td>
+<td> <input type="text" name="noOfPages" size="48"> </td>
+</tr>
+<tr>
+<td> Enter Book Type :</td>
+<td> <input type="text" name="bookType" size="48">
+    <p>Book Type</p>
+    <form>
+        <input type="radio"  name = "bookType" value="Action">Action
+        <input type="radio"  name = "bookType" value="Adventure">Adventure
+        <input type="radio"  name = "bookType" value="Classics">Classics
+        <input type="radio"  name = "bookType" value="Comic Book">Comic Book
+        <input type="radio"  name = "bookType" value="Graphic Novel">Graphic Novel     
+        <input type="radio"  name = "bookType" value="Detective">Detective
+        <input type="radio"  name = "bookType" value="Mystery">Mystery
+        <input type="radio"  name = "bookType" value="Historical Fiction">Historical Fiction
+        <input type="radio"  name = "bookType" value="Horror">Horror
+        <input type="radio"  name = "bookType" value="Lit Fic">Lit Fic
+    </form>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+</td>
+</tr>
+</table>
+</form>
+</body>
+</html>

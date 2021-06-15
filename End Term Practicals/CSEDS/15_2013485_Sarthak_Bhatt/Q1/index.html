@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Q1</title>
+    </head>
+    <body>
+        <form name="q1" method="POST" action="add.php">
+            <label for="bookName">Book Name : </label>
+            <input type="text" name="bookName" id="bookName"><br>
+            <label for="authorName">Author Name : </label>
+            <input type="text" name="authorName" id="authorName"><br>
+            <label  for="isbnNumber">Book Number : </label>
+            <input type="text" name="isbnNumber" id="isbnNumber"><br>
+            <label for="publisherName">Publisher Name : </label>
+            <input type="text" name="publisherName" id="publisherName"><br>
+            <label for="publicationYear">publicaton Year : </label>
+            <select name="publicationYear" id="publicationYear">
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+              </select><br>
+            <label for="noOfPages">No of Pages : </label>
+            <input type="range" min="200" max="400" id="noOfPages"><br>
+            <label>Book Type : </label><br>
+            <input type="radio" id="Action" name="Action">
+            <label for="Action">Action</label><br>
+            <input type="radio" id="Adventure" name="Adventure">
+            <label for="Adventure">Adventure</label><br>
+            <input type="radio" id="Classics" name="Classics">
+            <label for="Classics">Classics</label><br>
+            <input type="radio" id="GraphicNovel" name="GraphicNovel">
+            <label for="GraphicNovel">Graphic Novel</label><br>
+            <input type="radio" id=" Detective" name=" Detective">
+            <label for=" Detective"> Detective</label><br>
+            <input type="radio" id="Mystery" name="Mystery">
+            <label for="Mystery">Mystery</label><br>
+            <input type="radio" id="HistoricalFiction" name="HistoricalFiction">
+            <label for="HistoricalFiction">Historical Fiction</label><br>
+            <input type="radio" id="Horror" name="Horror">
+            <label for="Horror">Horror</label><br>
+            <input type="radio" id="LiteraryFiction" name="LiteraryFiction">
+            <label for="LiteraryFiction">Literary Fiction</label><br>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
