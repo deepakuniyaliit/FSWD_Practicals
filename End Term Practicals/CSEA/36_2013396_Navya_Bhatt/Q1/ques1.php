@@ -1,5 +1,5 @@
 <?php
-include_once('connection.php');
+include_once('config.php');
 ?>
 <?php
 if(isset($_POST['submit'])){
@@ -7,13 +7,11 @@ if(isset($_POST['submit'])){
     $authorname = $_POST['authorname'];
     $isbnnumber = $_POST['isbnnumber'];
     $publishername = $_POST['publishername'];
-    $publicationyear = $_POST['Year'];
+    $publicationyear = $_POST['publicationYear'];
     $noofpages = $_POST['noofpages'];
     $booktype = $_POST['booktype'];
 
-    $sql = "INSERT INTO `BookStore` (`id`, 'bookName', 'authorName', 'isbnNumber',
-    'publisherName', 'publicationYear', 'noOfPages', 'bookType') VALUES (NULL, '$bookname', '$authorname', '$isbnnumber', '$publishername','$publicationyear',
-    '$noofpages','$booktype')";
+    $sql = "INSERT INTO `books` (`id`, `bookName`, `authorName`, `isbnNumber`, `publisherName`, `publicationYear`, `noOfPages`, `bookType`) VALUES (NULL, '$bookname', '$authorname', '$isbnnumber', '$publishername','$publicationyear','$noofpages','$booktype')";
     mysqli_query($conn,$sql);
 }
 else{
@@ -26,46 +24,51 @@ else{
         <title>Form Data on Table</title>
     </head>
     <body>
-    <form action="ques1.php" method="POST">
-    <br/>Enter Book Name:<input type="text" name="bookname"><br/>
-    <br/>Enter author name: <input type="text" name="authorname"><br/>
-    <br/>Enter ISBN Number: <input type="text"name="isbnnumber"><br/>
-    <br/>Enter Publisher Name: <input type="text" name="publishername"><br/>
-    <br/>Enter Publication Year: <select name="Year" id="">
-            <option value="2010">2010</option>
-            <option value="2011">2010</option>
-            <option value="2012">2010</option>
-            <option value="2013">2010</option>
-            <option value="2014">2010</option>
-            <option value="2015">2010</option>
-            <option value="2016">2010</option>
-            <option value="2017">2010</option>
-            <option value="2018">2010</option>
-            <option value="2019">2010</option>
-            <option value="2020">2010</option>
-            <option value="2021">2010</option>
-        </select><br/>
-        <br/>Number of pages: <br/><input type="number" min="200" max="400" name="noofpages">
-        <input type="radio" id="action" name="booktype" value="action">
-        <label for="action">Action</label><br>
-        <input type="radio" id="adventure" name="booktype" value="adventure">
-        <label for="adventure">Adventure</label><br>
-        <input type="radio" id="classics" name="booktype" value="classics">
-        <label for="classics">Classics</label><br>
-        <input type="radio" id="comicbook" name="booktype" value="comicbook">
-        <label for="comicbook">Comic Book</label><br>
-        <input type="radio" id="graphicnovel" name="booktype" value="graphicnovel">
-        <label for="graphicnovel">Graphic Novel</label><br>
-        <input type="radio" id="detective" name="booktype" value="detective">
-        <label for="detective">Detective</label><br>
-        <input type="radio" id="mystery" name="booktype" value="mystery">
-        <label for="mystery">Mystery</label><br>
-        <input type="radio" id="hfiction" name="booktype" value="historical fiction">
-        <label for="historical fiction">Historical Fiction</label><br>
-        <input type="radio" id="horror" name="booktype" value="horror">
-        <label for="horror">Horror</label><br>
-        <input type="radio" id="lfiction" name="booktype" value="literary fiction">
-        <label for="literary fiction">Literary Fiction</label><br>
-    </form>
+    <form method="Post" action="add.php">
+			<table>
+				<tr>
+					<td>Book Name: </td>
+					<td><input type="text" name="bookname"</td>
+				</tr>
+				<tr>
+					<td>Author Name: </td>
+					<td><input type="text" name="authorname"</td>
+				</tr>
+				<tr>
+					<td>ISBN Number: </td>
+					<td><input type="number" name="isbnnumber"</td>
+				</tr>
+				<tr>
+					<td>Publisher Name: </td>
+					<td><input type="text" name="publishername"</td>
+				</tr>
+				<tr>
+					<td>Publisher Year: </td>
+					<td><input type="date" size="30" name="Year" class="slog1" min="2010-01-01"
+									 max="2021-01-01"/></td>
+				</tr>
+				<tr>
+					<td>Number of Pages: </td>
+					<td><input type="text" name="noofpages"</td>
+				</tr>
+				<tr>
+					<td>Book Type: </td>
+					<td><input type="radio" name="booktype" value="action"/>Action</td>
+					<td><input type="radio" name="booktype" value=""/>Adventure</td>
+					<td><input type="radio" name="booktype" value=""/>Classic</td>
+					<td><input type="radio" name="booktype" value=""/>Comic Book</td>
+					<td><input type="radio" name="booktype" value=""/>Graphic Novel</td>
+					<td><input type="radio" name="booktype" value=""/>Detective</td>
+					<td><input type="radio" name="booktype" value=""/>Mystery</td>
+					<td><input type="radio" name="booktype" value=""/>Historical Fiction</td>
+					<td><input type="radio" name="booktype" value=""/>Horror</td>
+					<td><input type="radio" name="booktype" value=""/>Literacy Fiction</td>
+				</tr>
+				<tr>
+					<td><input type="submit" name="submit"</td>
+				</tr>
+				
+			</table>
+		</form>
     </body>
 </html>
