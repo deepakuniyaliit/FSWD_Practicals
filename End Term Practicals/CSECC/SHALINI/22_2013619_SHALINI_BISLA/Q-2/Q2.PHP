@@ -38,8 +38,6 @@ include('config.php');
                 <td><?php echo $row[6]?></td>
                 <td><?php echo $row[7]?></td>
                 <td><a href="edit.php?id=<?php echo $row[0]?>">
-                    <input type="button" value="Edit"></a></td>
-                <td><input type="button" value="delete"></td>
 
             </tr>
             <?php } ?>
