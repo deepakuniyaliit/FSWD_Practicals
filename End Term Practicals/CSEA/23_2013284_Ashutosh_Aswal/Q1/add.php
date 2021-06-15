@@ -1,12 +1,13 @@
 <html>
+
 <head>
     <title>ADD DATA</title>
-    <link rel='stylesheet' href='CSS/styles.css' />
+    <link rel='stylesheet' href='CSS/style.css' />
 </head>
 
 <body>
     <form action='add.php' method='post'>
-        <table>
+        <table class='centered-table bordered-table'>
             <tr>
                 <td>Book Name</td>
                 <td>
@@ -22,7 +23,7 @@
             <tr>
                 <td>ISBN Number</td>
                 <td>
-                    <input type='number' name='isbnNumber' pattern = '[0-9]{13}' placeholder='Enter ISBN Number' required />
+                    <input type='number' name='isbnNumber' pattern='[0-9]{13}' placeholder='Enter ISBN Number' required />
                 </td>
             </tr>
             <tr>
@@ -34,7 +35,7 @@
             <tr>
                 <td>Publication Year</td>
                 <td>
-                <select name='publicationYear'>
+                    <select name='publicationYear'>
                         <option value='2010'>2010</option>
                         <option value='2011'>2011</option>
                         <option value='2012'>2012</option>
@@ -53,22 +54,63 @@
             <tr>
                 <td>Number Of Pages</td>
                 <td>
-                    <input type='number' name='noOfPages' min = '200' max = '400' placeholder='Enter Number Of Pages' required />
+                    <input type='number' name='noOfPages' min='200' max='400' placeholder='Pages' required />
                 </td>
             </tr>
             <tr>
                 <td>Book Type</td>
                 <td>
-                    <input type='radio' name='bookType' value='Action' required />Action
-                    <input type='radio' name='bookType' value='Adventure' required />Adventure
-                    <input type='radio' name='bookType' value='Classics' required />Comic Book
-                    <input type='radio' name='bookType' value='Comic Book' required />Comic Book
-                    <input type='radio' name='bookType' value='Graphic Novel' required />Graphic Novel
-                    <input type='radio' name='bookType' value='Detective' required />Detective
-                    <input type='radio' name='bookType' value='Mystery' required />Mystery
-                    <input type='radio' name='bookType' value='Historical Fiction' required />Historical Fiction
-                    <input type='radio' name='bookType' value='Horror' required />Horror
-                    <input type='radio' name='bookType' value='Literary Fiction' required />Literary Fiction
+                    <table>
+                        <tr>
+                            <td>
+                                <input type='radio' name='bookType' value='Action' required />Action
+                            </td>
+                            <td>
+                                <input type='radio' name='bookType' value='Adventure' required />Adventure
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type='radio' name='bookType' value='Classics' required />Comic Book
+
+                            </td>
+                            <td>
+                                <input type='radio' name='bookType' value='Comic Book' required />Comic Book<br />
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type='radio' name='bookType' value='Graphic Novel' required />Graphic Novel
+
+                            </td>
+                            <td>
+                                <input type='radio' name='bookType' value='Detective' required />Detective<br />
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type='radio' name='bookType' value='Mystery' required />Mystery
+
+                            </td>
+                            <td>
+                                <input type='radio' name='bookType' value='Historical Fiction' required />Historical Fiction<br />
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type='radio' name='bookType' value='Literary Fiction' required />Literary Fiction
+
+                            </td>
+                            <td>
+                                <input type='radio' name='bookType' value='Horror' required />Horror
+
+                            </td>
+                        </tr>
+                    </table>
+
                 </td>
             </tr>
             <tr>
