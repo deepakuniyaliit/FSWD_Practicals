@@ -12,7 +12,7 @@ if(isset($_POST['btn'])){
     $publicationY=$_POST['year'];
     $pages = $_POST['noOfPages'];
     $booktype=$_POST['Type'];
-	$sql =  "INSERT INTO `BookStore` (`bookname`, `author`, `isbn`,`publisher`,`publicationY`, `pages`, `booktype`) VALUES ('$bookId', '$bookname', '$author', '$isbn','$publisher','$publicationY','$pages','$booktype')";
+	$sql =  "INSERT INTO `BookStore` (`bookid`,`bookname`, `author`, `isbn`,`publisher`,`publicationY`, `pages`, `booktype`) VALUES ('$bookId', '$bookname', '$author', '$isbn','$publisher','$publicationY','$pages','$booktype')";
 	$a = mysqli_query($conn , $sql);
 
 }
