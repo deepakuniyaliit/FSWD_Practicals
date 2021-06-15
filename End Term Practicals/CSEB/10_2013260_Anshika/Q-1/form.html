@@ -1,86 +1,29 @@
-<!DOCTYPE html>
 <html>
-
-<head>
-    <title>Form in HTML</title>
-    <style>
-        #css_table {
-            margin-left: 20%;
-            border: 1px solid;
-            background-color: burlywood;
-        }
-
-        #forms {
-            margin-left: 20px;
-        }
-
-        .marginRight {
-            margin-right: 50px;
-        }
-
-        .margin {
-            color: black;
-            margin-left: 50px;
-        }
-    </style>
-</head>
-
+    <head>
+        <title>HTML Forms</title>
+    </head>
 <body>
-    <table id="css_table">
-        <td>
-            <h2 style="text-align: center;">Please Enter Book Details</h2>
-            <h3 style="text-align: center;">Fill the form below and Submit</h3><br>
-
-            <form id="forms" method="POST">
-                BookName<input type="text" class="color" name="name of the book" style="margin-left: 5%;" placeholder="Book Name" required><br><br>
-
-                AuthorName<input type="text" class="color" name="name of the author" style="margin-left: 5%;" placeholder="Author Name" required><br><br>
-
-              IsbnNumber<input type="text" class="color" style="margin-left: 5%;" placeholder="isbn no."
-                    required><br><br>
-
-                PublisherName<input type="text" class="color" style="margin-left: 5%;" placeholder="name publisher" required><br><br>
-
-
-                BookType<br>Action <input type="radio"  class="color" name="book type" value="Action" checked> 
-                Adventure<input type="radio" class="color" name="book type" value="Adventure" checked>
-                Comic Book<input type="radio" class="color" name="book type" value="Comic Book" checked>
-                Classics<input type="radio" class="color" name="book type" value="Classics" checked>
-                Graphical Novel<input type="radio" class="color" name="book type" value="Graphical Novel" checked>
-                Detective<input type="radio" class="color" name="book type" value="Detective">
-                Mystery<input type="radio" class="color" name="book type" value="Mystery" checked>
-                Detective<input type="radio" class="color" name="book type" value="Detective" checked>
-                Historical Fiction<input type="radio" class="color" name="book type" value="Historical Fiction" checked>
-                 Horror<input type="radio" class="color" name="book type" value="Horror" checked>
-                Literary Fiction<input type="radio" class="color" name="book type" value="Literary Fiction" checked>
-
- </SELECT><br><br>
-                
-                noofpages<input type="number" class="color" name="no of pages" style="margin-left: 5%;" placeholder="Book pages no." min="200" max="400" required><br><br>
-
-
-                Publication Year<SELECT name="year" class="margin" style="margin-left: 5%" required>
-                    <option value="2010">2010</option>
-                    <option value="2011">2011</option>
-                    <option value="2012">2012</option>
-                    <option value="2013">2013</option>
-                    <option value="2014">2014</option>
-                    <option value="2015">2015</option>
-                    <option value="2016">2016</option>
-                     <option value="2017">2017</option>
-                     <option value="2018">2018</option>
-                     <option value="2019">2019</option>
-                     <option value="2020">2020</option>
-                     <option value="2021">2021</option>
-               </SELECT><br><br>
-
-
-              
-
-                <input type="submit" style="margin-left: 40%;" value="Submit">
-            </td>
-            </form>
-    </table>
+<form method="GET" action="form.html">
+    USERNAME <input type="text" name="username" placeholder="Type Your Username" required><br>
+    E-MAIL <input type="email" name="email" placeholder="Type Your E-mail" required><br>
+    CONTACT <input type="text" name="contact" placeholder="phone no." minlength="10" maxlength="10" required><br>
+    Gender<br>Male <input type="radio" name="gender" value="male" checked> 
+    Female<input type="radio" name="gender" value="female" checked><br>
+    Select City <select name="city">
+        <option value="Mumbai">Mumbai</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Jaipur">Jaipur</option>
+        <option value="Mussorie">Mussorie</option>
+        <option value="Nanital">Nanital</option>
+        <option value="Chennai">Chennai</option>
+        <option value="Pune">Pune</option>
+        <option value="Banglore">Banglore</option>
+        <option value="Hyderabad">Hyderabad</option>
+        <option value="Lucknow">Lucknow</option>
+</select><br>
+    <input type="submit" value="Click Here To Submit Your Data">
+</form>
 </body>
-
 </html>
+
+
