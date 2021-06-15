@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BOOK STORE FORM</title>
+</head>
+<body>
+    <form action="Q1.php" method="POST">
+        Enter Book Name=<input type="text" name="b_name"><br>
+        Enter Author name=<input type="text" name="a_name"><br>
+        Enter ISBN Number=<input type="text" name="isbn_no"><br>
+        Enter Publisher Name=<input type="text" name="p_name"><br>
+        Enter Publication Year= 
+            <select id="" name = "p_year">
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+            </select><br>
+        Number of pages: <input type="number" min="200" max="400" name="p_no"><br>
+        Book Type: 
+        <input type="radio" id="action" name="book_type" value="action">
+        Action<br>
+        <input type="radio" id="adventure" name="book_type" value="adventure">
+        Adventure<br>
+        <input type="radio" id="classics" name="book_type" value="classics">
+        Classics<br>
+        <input type="radio" id="comicbook" name="book_type" value="comicbook">
+        Comic Book<br>
+        <input type="radio" id="graphicnovel" name="book_type" value="graphicnovel">
+        Graphic Novel<br>
+        <input type="radio" id="detective" name="book_type" value="detective">
+        Detective<br>
+        <input type="radio" id="mystery" name="book_type" value="mystery">
+        Mystery<br>
+        <input type="radio" id="hfiction" name="book_type" value="historical fiction">
+        Historical Fiction<br>
+        <input type="radio" id="horror" name="book_type" value="horror">
+        Horror<br>
+        <input type="radio" id="lfiction" name="book_type" value="literary fiction">
+        Literary Fiction<br>
+        <input type="submit">
+    </form>
+</body>
+</html>
