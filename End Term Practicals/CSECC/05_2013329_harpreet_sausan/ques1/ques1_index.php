@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="server.php" method="POST">
+    <form action="ques1_conn.php" method="POST">
         Enter Book Name:<input type="text" name="bname">
         <br>
         Enter author name: <input type="text" name="aname">
