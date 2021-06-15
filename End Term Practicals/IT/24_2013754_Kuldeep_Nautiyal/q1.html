@@ -1,0 +1,74 @@
+<?php
+include 'config.php';
+if(isset($_POST['submit']))
+{
+    $bookname = $_POST['bookName'];
+    $authorname = $_POST['authorName'];
+    $isbn = $_POST['isbnNumber'];
+    $publisher = $_POST['publisherName'];
+    $year= $_POST['publicationYear'];
+    $booktype= $_POST['bookType'];
+    $pages= $_POST['noOfPages'];
+
+    $sql = "INSERT INTO table1 (bookName, authorName, isbnNumber, publisherName, publicationYear, noOfPages, bookType) VALUES ('$bookname', '$authorname', '$isbn', '$publisher', '$year', '$pages', '$booktype')";
+    mysqli_query($conn, $sql);
+}
+else{
+    echo "Please click sub
+<Html>  
+ <head>   
+  <title>  
+   Form  
+  </title>  
+ </head>  
+ <body>
+ <table border="2"  cellspscing="5" cellpadding="5">
+  <form action="default.html" method="post"> 
+   <tr><td colspan="2" align="center">Admission Form</td></tr>         
+   <tr><td> BookName </td>          
+   <td><input type="text" name="txtbox" id="bname" size="27" placeholder="Enter Book Name" required/></td></tr>  
+   <tr><td> Author Name</td>           
+   <td><input type="text" name="txtbox" id="autname" size="27" placeholder="Enter Author Name" required/></td></tr>
+   <tr><td> ISBN Number </td>           
+   <td><input type="text" name="txtbox" id="isbnno" size="27" placeholder="Enter ISBN No." required/></td></tr> 
+   <tr><td>Publication Name</td>          
+   <td><input type="text" name="txtbox" id="pubname" size="27" placeholder="Enter Publication Name " required/></td></tr>  
+   <tr><td> Publication Year :</td>    
+   <td><select>  
+    <option value="pubyear">Select Year</option>  
+    <option >2010</option>  
+    <option >2011</option>  
+    <option >2012</option>
+    <option >2013</option>  
+    <option >2014</option>  
+    <option >2015</option>  
+    <option >2016</option>  
+    <option >2017</option>
+    <option >2018</option>
+    <option >2019</option>
+    <option >2020</option>
+    <option >2021</option>  
+   </select>    
+   </td></tr>  
+   <tr ><td rowspan="3">   Book Type</td>   
+   <td><input type="radio" name="booktyp" id="act" checked/> Action   
+   <input type="radio" name="booktyp" id="adv"/> Adventure       
+   <input type="radio" name="booktyp" id="cls" /> Classics
+   <input type="radio" name="booktyp" id="cmb"/> Comic Book</td></tr>       
+   <tr><td>
+   <input type="radio" name="booktyp" id="gpn" /> Graphic Novel   
+   <input type="radio" name="booktyp" id="dtc"/> Detective
+   <input type="radio" name="booktyp" id="mys"/> Mystery  </td></tr>
+   <tr><td>     
+   <input type="radio" name="booktyp" id="hsf" /> Historical Fiction   
+   <input type="radio" name="booktyp" id="hrr"/> Horror       
+   <input type="radio" name="booktyp" id="ltf"/> Literary Fiction
+   </td></tr>
+   <tr><td>   No. Of Pages </td>    
+   <td><input type="text" name="noop" size="27" placeholder="Enter No. of Pages" ></td></tr>
+   <tr><td align="center"><input type="Submit" value="Submit"/></td>
+   <td align="center"><input type="Reset" value="Reset"/></td></tr>  
+  </form>
+  </table>       
+ </body>  
+</html>
