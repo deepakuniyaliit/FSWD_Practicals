@@ -53,7 +53,7 @@ include('config.php');
 
 <head>
     
-    <title>User Details</title>
+    <title>User</title>
 </head>
 <body>
     
