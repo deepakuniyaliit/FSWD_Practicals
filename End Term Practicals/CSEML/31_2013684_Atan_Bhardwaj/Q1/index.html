@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Insertion Form</title>
+</head>
+
+<body>
+    <div>
+        <h1 id="headings" style="color:red;"><strong>Insert Record</strong></h1>
+    </div>
+    <div class="container">
+        <form action="insertion.php" method="post">
+            <div>
+                <label for="bookName">Book Name</label>
+                <input type="text" name="bookName" class="form-control" required="" placeholder="Enter book name">
+            </div>
+            <div>
+                <label for="authorName">Author</label>
+                <input type="text" name="authorName" class="form-control" required="" placeholder="Enter author name">
+            </div>
+            <div>
+                <label for="isbnNumber">ISBN Number</label>
+                <input type="text" name="isbnNumber" class="form-control" required="" placeholder="Enter isbnNumber">
+            </div>
+            <div>
+                <label for="publisherName">Publisher Name</label>
+                <input type="text" name="publisherName" class="form-control" required=""
+                    placeholder="Enter publisherName">
+            </div>
+            <div>
+                <label for="publicationYear">Publication Year</label>
+                <select name="publicationYear" required="">
+                    <option value="2010">2010</option>
+                    <option value="2011">2011</option>
+                    <option value="2012">2012</option>
+                    <option value="2013">2013</option>
+                    <option value="2014">2014</option>
+                    <option value="2015">2015</option>
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                </select>
+            </div>
+            <div>
+                <label for="noOfPages">No Of Pages</label>
+                <input min="200" max="400" type="number" name="noOfPages" class="form-control" required=""
+                    placeholder="Enter bookType">
+            </div>
+            <div>
+                <label for="bootk">Book Type: </label>
+                <input id="action" type="radio" name="bookt" class="form-control" required=""
+                    placeholder="Enter bookType">
+                <label for="action">Action</label>
+
+                <input id="adventure" type="radio" name="bookt" class="form-control" required=""
+                    placeholder="Enter bookType">
+                <label for="adventure">Adventure</label>
+
+                <input id="classic" type="radio" name="bookt" class="form-control" required=""
+                    placeholder="Enter bookType">
+                <label for="classic">Classic</label>
+
+                <input id="comicbook" type="radio" name="bookt" class="form-control" required=""
+                    placeholder="Enter bookType">
+                <label for="comicbook">Comic Book</label>
+
+                <input id="graphicnovel" type="radio" name="bookt" class="form-control" required=""
+                    placeholder="Enter bookType">
+                <label for="graphicnovel">Graphic Novel</label>
+
+                <input id="detective" type="radio" name="bookt" class="form-control" required=""
+                    placeholder="Enter bookType">
+                <label for="detective">Detective</label>
+
+                <input id="mystery" type="radio" name="bookt" class="form-control" required=""
+                    placeholder="Enter bookType">
+                <label for="Mystery">Mystery</label>
+
+                <input id="historicalfiction" type="radio" name="bookt" class="form-control" required=""
+                    placeholder="Enter bookType">
+                <label for="historicalfiction">Historical Fiction</label>
+
+                <input type="radio" name="bookt" class="form-control" required="" placeholder="Enter bookType">
+                <label for="horror">Horror</label>
+
+                <input id="literaryfiction" type="radio" name="bookt" class="form-control" required=""
+                    placeholder="Enter bookType">
+                <label for="literaryfiction">Literary Fiction</label>
+            </div>
+            <div>
+                <button type="submit" value="insert">Insert</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
