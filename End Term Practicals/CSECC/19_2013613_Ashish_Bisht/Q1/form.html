@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form </title>
+    <style>
+        form>*
+        {
+            margin : 10px auto;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h2>Form</h2>
+    <form mathod="POST" action="server.php">
+        <label for="book_name"> Book Name </label>
+        <input type="text" name="book_name" placeholder="Enter Book Name.." required/>
+        <br/>
+        <label for="auth_name"> Author Name </label>
+        <input type="text" name="auth_name" placeholder="Enter Author Name.." required/>
+        <br/>
+        <label for="isbn_no"> isbn_Number</label>
+        <input type="number" name="isbn_no" placeholder="Enter Isbn Number.." required/>
+        <br/>
+        <label for="pub_name"> Published Name </label>
+        <input type="text" name="pub_name" placeholder="Enter Publisher Name.." required/>
+        <br/>
+        <label>Publication Year : </label>
+        <select name="year">
+            <option>2010</option>
+            <option>2011</option>
+            <option>2012</option>
+            <option>2013</option>
+            <option>2014</option>
+            <option>2015</option>
+            <option>2016</option>
+            <option>2017</option>
+            <option>2018</option>
+            <option>2019</option>
+            <option>2020</option>
+            <option>2021</option>
+        </select>
+        <br/>
+
+        <label> Number of Pages : </label>
+        <input type="number" name="noOfPages" min="200" max="400" required/>
+        <br/>
+
+        <span> Book Type : </span>
+        <br/>
+        <input type="radio" name="type" value="action">
+        <label for="action">Action</label>
+
+        <input type="radio" name="type" value="adventure">
+        <label for="adventure">Adventure</label>
+
+        <input type="radio" name="type" value="classics">
+        <label for="classics">Classics</label>
+
+        <input type="radio" name="type" value="comic">
+        <label for="comic">comic</label>
+
+        <input type="radio" name="type" value="Graphic_Novel">
+        <label for="Graphic_Novel">Graphic Novel</label>
+
+        <input type="radio" name="type" value="detective">
+        <label for="detective">Detective</label>
+
+        <input type="radio" name="type" vlaue="Mystery">
+        <label for="Mystery">Mystery</label>
+
+        <input type="radio" name="type" value="Historical_Fiction"> 
+        <label for="Historical_Fiction">Historical Fiction</label>
+
+        <input type="radio" name="type" value="Horro">
+        <label for="Horror">Horror</label>
+
+        <input type="radio" name="type" value="Literary_Fiction">
+        <label for="Literary_Fiction">Literary Fiction</label>
+        <br>
+        <input type="submit" placeholder="Submit"/>
+    </form>
+</center>
+</body>
+</html>
