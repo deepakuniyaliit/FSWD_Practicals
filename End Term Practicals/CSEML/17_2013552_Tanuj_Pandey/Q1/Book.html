@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BOOKS LIST</title>
+        
+        <style>
+            div
+            {
+                margin:0px auto;
+                width:40%;
+                padding:20px;
+                font-size:15px;
+                background-color:#006699;
+            }
+            input[type=text],select
+            {
+                width:30%;
+                padding:12px 20px;
+                margin:8px 0px;
+                display:inline-block;
+                border:1px solid #ccc;
+                box-sizing:border-box;
+                font-size:14px;
+            }
+            input[type=submit]
+            {
+                width:100%;
+                background-color: #003399;
+                color:white;
+                padding:14px 20px;
+                margin:8px 0px;
+                border:none;
+                border-radius:4px;
+                cursor:pointer;
+                font-size:16px;
+            }
+            input[type=submit]:hover
+            {
+                background-color:#2F4F4F;
+            }
+            div label
+            {
+                color:white;
+            }
+            h1
+            {
+                color:blue;
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div>
+        <form method="post" id="formval" name="regform" action="insert.php">
+            <label>Book Name</label>
+            <input type="text" name="bname">
+            <label>Author Name</label>
+            <input type="text" name="aname">
+            <label>isbnNumber</label>
+            <input type="text" name="inumber">
+            <label>Publisher Name</label>
+            <input type="text" name="pname">
+            <label>Publisher Year</label>
+            <select name="pyear">
+                <option>2010</option>
+                <option>2011</option>
+                <option>2012</option>
+                <option>2013</option>
+                <option>2014</option>
+                <option>2015</option>
+                <option>2016</option>
+                <option>2017</option>
+                <option>2018</option>
+                <option>2019</option>
+                <option>2020</option>
+                <option>2021</option> 
+            </select>
+            <br>
+            <label name="Book Type">Book Type</label><br><br>
+            <input type="radio" name="btype" value="action"><label>Action</label>
+            <input type="radio" name="btype" value="adventure"><label>Adventure</label>
+            <input type="radio" name="btype" value="classics"><label>Classics</label>
+            <input type="radio" name="btype" value="comic"><label>Comic Book</label>
+            <input type="radio" name="btype" value="graphic"><label>Graphic Novel</label>
+            <input type="radio" name="btype" value="detective"><label>Detective</label>
+            <input type="radio" name="btype" value="mystery"><label>Mystery</label>
+            <input type="radio" name="btype" value="historical"><label>Historical Fiction</label>
+            <input type="radio" name="btype" value="horror"><label>Horror</label>
+            <input type="radio" name="btype" value="literary"><label>Literary Fiction</label><br><br>
+            <label name="pages">Number of Pages:</label>
+            <input type="range" name="pgvalue" min="200" max="400">
+            
+            <br/>
+            <input type="submit" name="submit" value="Submit">
+        </form>
+        </div>
+    </body>
+</html>

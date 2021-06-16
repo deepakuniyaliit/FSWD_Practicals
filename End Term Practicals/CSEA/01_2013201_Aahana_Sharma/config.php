@@ -1,0 +1,33 @@
+<?php
+$hostname="localhost";
+$username="root";
+$password="";
+$database="BookStore";
+
+$conn=mysqli_connect($hostname, $username ,$password ,$database);
+if($conn){
+	echo "Connection Successful...";
+}
+else{
+	echo "Connection failed..." +mysqli_connect_error();
+}
+?>
+<?php
+include 'config.php';
+if(isset($_POST['submit']))
+{
+    $bookname = $_POST['bookName'];
+    $authorname = $_POST['authorName'];
+    $isbn = $_POST['isbnNumber'];
+    $publisher = $_POST['publisherName'];
+    $year= $_POST['publicationYear'];
+    $booktype= $_POST['bookType'];
+    $pages= $_POST['noOfPages'];
+
+    $sql = "INSERT INTO table1 (bookName, authorName, isbnNumber, publisherName, publicationYear, noOfPages, bookType) VALUES ('$bookname', '$authorname', '$isbn', '$publisher', '$year', '$pages', '$booktype')";
+    mysqli_query($conn, $sql);
+}
+else{
+    echo "Please click submit button to submit the data..";
+}
+?>
