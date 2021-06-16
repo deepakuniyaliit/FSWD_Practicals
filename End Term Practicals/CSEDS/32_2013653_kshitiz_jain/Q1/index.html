@@ -1,0 +1,212 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Create Record</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css" />
+    <style type="text/css">
+        .wrapper {
+            width: 500px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="page-header">
+                        <h2>BookfORM</h2>
+                    </div>
+                    <p>Please fill out the form.</p>
+                    <form action="insert.php" method="post">
+                        <div class="form-group">
+                            <label>bookName</label>
+                            <input type="text" name="bookName" class="form-control" />
+                        </div>
+
+                        <div class="form-group">
+                            <label>authorName</label>
+                            <input type="text" name="authorName" class="form-control" />
+                        </div>
+
+                        <div class="form-group">
+                            <label>isbnNumber</label>
+                            <input type="text" name="isbnNumber" class="form-control" />
+                        </div>
+
+                        <div class="form-group">
+                            <label>noofPages</label>
+                            <input type="number" pattern="[-+]?[0-9]" min="200" max="400">
+                        </div>
+
+                        <div class="form-group">
+                            <label>publisherName</label>
+                            <input type="text" name="publisherName" class="form-control" />
+                        </div>
+
+                        <div class="form-group">
+                            <label>year</label>
+                            <select name="pyear">
+                                <option value="2010">2010</option>
+                                <option value="2011">2011</option>
+                                <option value="2012">2012</option>
+                                <option value="2013">2013</option>
+                                <option value="2014">2014</option>
+                                <option value="2015">2015</option>
+                                <option value="2016">2016</option>
+                                <option value="2017">2017</option>
+                                <option value="2018">2018</option>
+                                <option value="2019">2019</option>
+                                <option value="2020">2020</option>
+                                <option value="2021">2021</option>
+                              </select>
+                            </select>
+                        </div>
+                        <!-- Action, Adventure, Classics, Comic
+                        Book, Graphic Novel, Detective, Mystery, Historical Fiction, Horror, Literary Fiction. -->
+                        <!-- -->
+                        <div class="form-group">
+                            <label>booktype</label>
+                            <input type="radio" id="male" name="booktype" value="action" />
+                            <label for="male">Action</label><br />
+                            <input type="radio" id="male" name="booktype" value="Adventure" />
+                            <label for="male">Adventure</label><br />
+                            <input type="radio" id="male" name="booktype" value="classics" />
+                            <label for="male">Classics</label><br />
+                            <input type="radio" id="male" name="booktype" value="comic" />
+                            <label for="male">comic</label><br />
+
+                            <input type="radio" id="male" name="booktype" value="graphic" />
+                            <label for="male">graphic</label><br />
+                            <input type="radio" id="male" name="booktype" value="detective" />
+                            <label for="male">detective</label><br />
+                            <input type="radio" id="male" name="booktype" value="mystery" />
+                            <label for="male">mystery</label><br />
+                            <input type="radio" id="male" name="booktype" value="Historical" />
+                            <label for="male">Historical</label><br />
+                            <input type="radio" id="male" name="booktype" value="horror" />
+                            <label for="male">horror</label><br />
+                            <input type="radio" id="male" name="booktype" value="literary" />
+                            <label for="male">literary</label><br />
+                        </div>
+                        <input type="submit" class="btn btn-primary" name="submit" value="Submit" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Create Record</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css" />
+    <style type="text/css">
+        .wrapper {
+            width: 500px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="page-header">
+                        <h2>BookfORM</h2>
+                    </div>
+                    <p>Please fill out the form.</p>
+                    <form action="insert.php" method="post">
+                        <div class="form-group">
+                            <label>bookName</label>
+                            <input type="text" name="bookName" class="form-control" />
+                        </div>
+
+                        <div class="form-group">
+                            <label>authorName</label>
+                            <input type="text" name="authorName" class="form-control" />
+                        </div>
+
+                        <div class="form-group">
+                            <label>isbnNumber</label>
+                            <input type="text" name="isbnNumber" class="form-control" />
+                        </div>
+
+                        <div class="form-group">
+                            <label>noofPages</label>
+                            <input type="number" pattern="[-+]?[0-9]" min="200" max="400">
+                        </div>
+
+                        <div class="form-group">
+                            <label>publisherName</label>
+                            <input type="text" name="publisherName" class="form-control" />
+                        </div>
+
+                        <div class="form-group">
+                            <label>year</label>
+                            <select name="pyear">
+                                <option value="2010">2010</option>
+                                <option value="2011">2011</option>
+                                <option value="2012">2012</option>
+                                <option value="2013">2013</option>
+                                <option value="2014">2014</option>
+                                <option value="2015">2015</option>
+                                <option value="2016">2016</option>
+                                <option value="2017">2017</option>
+                                <option value="2018">2018</option>
+                                <option value="2019">2019</option>
+                                <option value="2020">2020</option>
+                                <option value="2021">2021</option>
+                              </select>
+                            </select>
+                        </div>
+                        <!-- Action, Adventure, Classics, Comic
+                        Book, Graphic Novel, Detective, Mystery, Historical Fiction, Horror, Literary Fiction. -->
+                        <!-- -->
+                        <div class="form-group">
+                            <label>booktype</label>
+                            <input type="radio" id="male" name="booktype" value="action" />
+                            <label for="male">Action</label><br />
+                            <input type="radio" id="male" name="booktype" value="Adventure" />
+                            <label for="male">Adventure</label><br />
+                            <input type="radio" id="male" name="booktype" value="classics" />
+                            <label for="male">Classics</label><br />
+                            <input type="radio" id="male" name="booktype" value="comic" />
+                            <label for="male">comic</label><br />
+
+                            <input type="radio" id="male" name="booktype" value="graphic" />
+                            <label for="male">graphic</label><br />
+                            <input type="radio" id="male" name="booktype" value="detective" />
+                            <label for="male">detective</label><br />
+                            <input type="radio" id="male" name="booktype" value="mystery" />
+                            <label for="male">mystery</label><br />
+                            <input type="radio" id="male" name="booktype" value="Historical" />
+                            <label for="male">Historical</label><br />
+                            <input type="radio" id="male" name="booktype" value="horror" />
+                            <label for="male">horror</label><br />
+                            <input type="radio" id="male" name="booktype" value="literary" />
+                            <label for="male">literary</label><br />
+                        </div>
+                        <input type="submit" class="btn btn-primary" name="submit" value="Submit" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+>>>>>>> 3fbb9b4c5475a15e49ecda7d0916216aaf4b745d
+</html>
