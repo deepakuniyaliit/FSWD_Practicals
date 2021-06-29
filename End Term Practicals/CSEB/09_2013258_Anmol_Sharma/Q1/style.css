@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    padding: 40px;
+}
+
+form {
+    width: 100%;
+    margin-top: 50px;
+}
+
+table {
+    margin: 0 auto;
+}
+
+tr {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+td {
+    margin: 10px;
+}
+
+#sub {
+    width: 100%;
+}
+
+button {
+    width: 100%;
+    cursor: pointer;
+}
+
+#page {
+    margin-left: 5px;
+}

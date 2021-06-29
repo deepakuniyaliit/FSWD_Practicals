@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+</head>
+<body>
+    <form method="POST" action="insert.php">
+        <div class="mb-3">
+            <div class="form-group">
+                <label>bookName</label>
+                <input type="text" name="bookName" class="form-control">
+            </div>
+            <div class="mb-3">
+                <div class="form-group">
+                    <label>authorName</label>
+                    <input type="text" name="authorName" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <div class="form-group">
+                        <label>publisherName</label>
+                        <input type="text" name="publisherName" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-group">
+                            <label>isbnNumber</label>
+                            <input type="number" name="isbnNumber" class="form-control">
+                        </div>
+          <div class="mb-3">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Action
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Adventure
+                </label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                     Classics
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                     Comic
+                    </label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                         Horror
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                         Graphic novel
+                        </label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                             Detective
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                            <label class="form-check-label" for="flexRadioDefault2">
+                             Historical fiction
+                            </label>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                                  Dropdown
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                  <li><button class="dropdown-item" type="button">2010</button></li>
+                                  <li><button class="dropdown-item" type="button">2021</button></li>
+                                  
+                                </ul>
+                              </div>
+                              <div class="mb-3">
+                                <div class="form-group">
+                                    <label>numberOfPages</label>
+                                    <input type="number" name="numberOfPages" class="form-control">
+                                </div>
+                  </div>
+              </div>
+          </div>
+          <input type="submit" class="btn btn-primary" name="submit" value="Submit">
+      </form>
+ 
+</body>
+</html>
